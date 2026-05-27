@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ruthvik-portfolio.vercel.app"),
+  metadataBase: new URL("https://ruthvik-portfolio-one.vercel.app"),
   title: "Ruthvik Uttarala — Software Engineer | AI, Cloud & Full Stack",
   description:
     "Portfolio of Ruthvik Uttarala, a software engineer building AI products, cloud infrastructure, and full-stack systems.",
