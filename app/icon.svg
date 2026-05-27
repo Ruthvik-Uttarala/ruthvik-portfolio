@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0E0D0B" />
+  <rect x="5.5" y="5.5" width="53" height="53" rx="10" fill="none" stroke="rgba(242,238,231,0.2)" />
+  <text
+    x="14"
+    y="39"
+    font-size="23"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+    letter-spacing="1.2"
+    fill="#F2EEE7"
+  >
+    RU
+  </text>
+</svg>
