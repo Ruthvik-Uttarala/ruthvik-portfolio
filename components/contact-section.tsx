@@ -3,12 +3,12 @@ import { profile, resumeHref } from "@/data/portfolio";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="mx-auto w-full max-w-[1200px] px-5 pt-24 pb-14 sm:px-8">
-      <div className="rounded-3xl border border-[var(--line)] bg-[color:var(--surface)] p-6 sm:p-8">
-        <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">
+    <section id="contact" className="mx-auto w-full max-w-[1430px] px-4 pt-20 pb-14 sm:px-6">
+      <div className="rounded-md border border-[var(--line)] bg-[var(--accent)] p-6 text-[var(--ink)] sm:p-8">
+        <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">
           Building something that needs an engineer who can ship?
         </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)]">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--accent-ink)]">
           I&apos;m open to software engineering roles across applied AI, full-stack product development, and
           cloud-backed systems.
         </p>

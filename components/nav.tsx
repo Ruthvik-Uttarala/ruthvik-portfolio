@@ -50,9 +50,9 @@ export function Nav() {
 
   return (
     <header className={navClass}>
-      <div className="mx-auto max-w-[1200px] px-5 py-4 sm:px-8">
+      <div className="mx-auto max-w-[1430px] px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between">
-        <Link href="#top" className="font-mono text-xs tracking-[0.22em] text-[var(--muted)] uppercase">
+        <Link href="#top" className="font-mono text-xs font-bold tracking-[0.22em] text-[var(--accent)] uppercase">
           {profile.shortMark}
         </Link>
 
@@ -61,13 +61,13 @@ export function Nav() {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="relative rounded-full px-3 py-1.5 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]"
+              className="relative px-3 py-1.5 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]"
               data-cursor-expand="true"
             >
               {activeId === item.id ? (
                 <motion.span
                   layoutId="active-nav"
-                  className="absolute inset-0 rounded-full border border-[var(--line)] bg-[color:var(--surface)]"
+                  className="absolute inset-0 border border-[var(--line)] bg-[color:var(--surface)]"
                   transition={{ type: "spring", stiffness: 380, damping: 32, mass: 0.4 }}
                 />
               ) : null}
@@ -81,7 +81,7 @@ export function Nav() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full px-2.5 py-1.5 text-xs text-[var(--muted)] transition hover:text-[var(--text)] sm:inline-flex"
+            className="hidden px-2.5 py-1.5 text-xs text-[var(--muted)] transition hover:text-[var(--text)] sm:inline-flex"
             data-cursor-label="VIEW REPO"
             data-cursor-expand="true"
           >
@@ -91,14 +91,14 @@ export function Nav() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full px-2.5 py-1.5 text-xs text-[var(--muted)] transition hover:text-[var(--text)] sm:inline-flex"
+            className="hidden px-2.5 py-1.5 text-xs text-[var(--muted)] transition hover:text-[var(--text)] sm:inline-flex"
             data-cursor-expand="true"
           >
             LinkedIn
           </a>
           <a
             href={resumeHref}
-            className="inline-flex rounded-full border border-[var(--line)] bg-[color:var(--surface)] px-4 py-2 text-sm font-medium text-[var(--text)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+            className="inline-flex border border-[var(--line)] bg-[color:var(--surface)] px-4 py-2 text-sm font-medium text-[var(--text)] transition hover:border-[color:var(--accent)] hover:bg-[color:var(--accent)] hover:text-[color:var(--ink)]"
             data-cursor-label="OPEN PDF"
             data-cursor-expand="true"
           >
@@ -111,12 +111,12 @@ export function Nav() {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="relative rounded-full px-3 py-1.5 text-xs text-[var(--muted)] transition-colors hover:text-[var(--text)]"
+              className="relative px-3 py-1.5 text-xs text-[var(--muted)] transition-colors hover:text-[var(--text)]"
             >
               {activeId === item.id ? (
                 <motion.span
                   layoutId="active-nav-mobile"
-                  className="absolute inset-0 rounded-full border border-[var(--line)] bg-[color:var(--surface)]"
+                  className="absolute inset-0 border border-[var(--line)] bg-[color:var(--surface)]"
                   transition={{ type: "spring", stiffness: 380, damping: 32, mass: 0.4 }}
                 />
               ) : null}

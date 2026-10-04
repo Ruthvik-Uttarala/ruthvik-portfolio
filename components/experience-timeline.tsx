@@ -15,8 +15,8 @@ export function ExperienceTimeline() {
   const lineOpacity = useTransform(scrollYProgress, [0, 0.15], [0.35, 1]);
 
   return (
-    <section id="experience" className="mx-auto w-full max-w-[1200px] px-5 py-24 sm:px-8">
-      <SectionHeading title="Experience measured in shipped outcomes" />
+    <section id="experience" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
+      <SectionHeading eyebrow="Outcome log" title="Experience measured in shipped outcomes" />
       <div ref={wrapperRef} className="relative mt-8">
         <div className="absolute top-2 bottom-2 left-3 w-px bg-[var(--line)]" />
         <motion.div
@@ -33,13 +33,13 @@ export function ExperienceTimeline() {
               transition={{ duration: 0.45 }}
               className="group relative pl-10"
             >
-              <span className="absolute top-2 left-0 inline-flex size-6 items-center justify-center rounded-full border border-[var(--line)] bg-[color:var(--surface)] font-mono text-[10px] text-[var(--muted)]">
+              <span className="absolute top-2 left-0 inline-flex size-6 items-center justify-center border border-[var(--line)] bg-[color:var(--surface)] font-mono text-[10px] text-[var(--accent)]">
                 •
               </span>
-              <div className="rounded-2xl border border-[var(--line)] bg-[color:var(--surface)] p-5">
+              <div className="rounded-md border border-[var(--line)] bg-[color:var(--surface)] p-5">
                 <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-lg font-semibold text-[var(--text)]">{item.company}</h3>
+                    <h3 className="text-2xl font-black text-[var(--text)]">{item.company}</h3>
                     <p className="text-sm text-[var(--muted)]">{item.role}</p>
                   </div>
                   <span className="font-mono text-xs tracking-[0.08em] text-[var(--muted)]">{item.dates}</span>
@@ -106,7 +106,7 @@ function MetricPill({ text }: { text: string }) {
   return (
     <span
       ref={ref}
-      className="rounded-full border border-[var(--line)] bg-[color:var(--surface-elev)] px-3 py-1.5 font-mono text-[11px] tracking-[0.06em] text-[color:var(--text)]"
+      className="border border-[var(--line)] bg-[color:var(--surface-elev)] px-3 py-1.5 font-mono text-[11px] tracking-[0.06em] text-[color:var(--accent)]"
     >
       {display}
     </span>

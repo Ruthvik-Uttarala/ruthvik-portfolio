@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f7f5;
-  --text: #151515;
-  --muted: #5f6368;
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.26);
-  --steel: #475569;
-  --line: rgba(15, 23, 42, 0.12);
-  --line-soft: rgba(15, 23, 42, 0.07);
-  --surface: rgba(255, 255, 255, 0.76);
-  --surface-elev: rgba(255, 255, 255, 0.92);
-  --surface-hover: rgba(241, 245, 249, 0.96);
-  --surface-transparent: rgba(255, 255, 255, 0.72);
+  --bg: #332d2d;
+  --ink: #111312;
+  --text: #f1f4e8;
+  --muted: #b8b8ac;
+  --accent: #dff55c;
+  --accent-ink: #0f5a4c;
+  --accent-soft: rgba(223, 245, 92, 0.36);
+  --steel: #9da8b9;
+  --lavender: #ead8ff;
+  --paper: #eff1e5;
+  --line: rgba(241, 244, 232, 0.18);
+  --line-soft: rgba(241, 244, 232, 0.08);
+  --surface: rgba(17, 19, 18, 0.84);
+  --surface-elev: rgba(239, 241, 229, 0.08);
+  --surface-hover: rgba(223, 245, 92, 0.16);
+  --surface-transparent: rgba(17, 19, 18, 0.78);
 }
 
 @theme inline {
@@ -23,10 +27,7 @@
 }
 
 body {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 28%),
-    radial-gradient(circle at 90% 0%, rgba(15, 23, 42, 0.05), transparent 26%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-geist-sans), "Inter", ui-sans-serif, system-ui;
 }
@@ -36,8 +37,31 @@ html {
 }
 
 .grain {
-  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 0.5px, transparent 0.5px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.13) 0.5px, transparent 0.5px);
   background-size: 2px 2px;
+}
+
+.pixel-word {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow:
+    0.055em 0 currentColor,
+    0.11em 0 currentColor;
+}
+
+.dot-grid {
+  background-image: radial-gradient(currentColor 1.8px, transparent 2px);
+  background-size: 13px 13px;
+}
+
+.scan-grid {
+  background-image:
+    linear-gradient(to right, var(--line-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line-soft) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 a,
@@ -47,13 +71,8 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.36);
+  box-shadow: 0 0 0 2px rgba(224, 151, 92, 0.4);
   border-radius: 10px;
-}
-
-::selection {
-  background: rgba(37, 99, 235, 0.18);
-  color: var(--text);
 }
 
 @media (prefers-reduced-motion: reduce) {

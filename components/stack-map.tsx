@@ -23,9 +23,9 @@ export function StackMap() {
   }, [reduce]);
 
   return (
-    <section id="stack" className="mx-auto w-full max-w-[1200px] px-5 py-24 sm:px-8">
-      <SectionHeading title="Tools I build with" />
-      <div className="relative overflow-hidden rounded-3xl border border-[var(--line)] bg-[color:var(--surface)] p-5 sm:p-7">
+    <section id="stack" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
+      <SectionHeading eyebrow="Stack map" title="Tools I build with" />
+      <div className="relative overflow-hidden rounded-md border border-[var(--line)] bg-[color:var(--surface)] p-5 sm:p-7">
         <svg className="pointer-events-none absolute inset-0 size-full opacity-45">
           {lines.map((line) => (
             <line
@@ -34,7 +34,7 @@ export function StackMap() {
               y1={`${line.y1}%`}
               x2={`${line.x2}%`}
               y2={`${line.y2}%`}
-              stroke={active % 2 ? "rgba(113,138,163,0.45)" : "rgba(224,151,92,0.35)"}
+              stroke={active % 2 ? "rgba(157,168,185,0.45)" : "rgba(223,245,92,0.35)"}
               strokeWidth={1}
             />
           ))}
@@ -44,15 +44,15 @@ export function StackMap() {
             <motion.article
               key={group.name}
               onMouseEnter={() => setActive(index)}
-              className="rounded-2xl border border-[var(--line)] bg-[color:var(--surface-elev)] p-4"
-              animate={{ borderColor: active === index ? "rgba(224,151,92,0.5)" : "rgba(255,255,255,0.12)" }}
+              className="rounded-md border border-[var(--line)] bg-[color:var(--surface-elev)] p-4"
+              animate={{ borderColor: active === index ? "rgba(223,245,92,0.55)" : "rgba(255,255,255,0.12)" }}
             >
               <h3 className="mb-3 font-mono text-xs tracking-[0.12em] text-[var(--muted)] uppercase">{group.name}</h3>
               <div className="flex flex-wrap gap-2">
                 {group.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-md border border-[var(--line)] px-2 py-1 font-mono text-[10px] tracking-[0.08em] text-[var(--text)] uppercase"
+                    className="border border-[var(--line)] px-2 py-1 font-mono text-[10px] tracking-[0.08em] text-[var(--text)] uppercase"
                   >
                     {tool}
                   </span>

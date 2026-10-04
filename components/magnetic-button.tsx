@@ -35,7 +35,7 @@ export function MagneticButton({ href, children, className, label, external }: M
 
   const cls =
     className ??
-    "inline-flex items-center justify-center rounded-full border border-[var(--line)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition-colors hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]";
+    "inline-flex items-center justify-center border border-[var(--line)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition-colors hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]";
 
   if (external) {
     return (
