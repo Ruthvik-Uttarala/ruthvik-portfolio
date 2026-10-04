@@ -8,21 +8,21 @@ export function ContactSection() {
         <div className="evidence-card dark-panel p-6 sm:p-8">
           <p className="mono-label text-[var(--lime)]">Contact / availability</p>
           <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">
-            Building something that needs an engineer who can ship?
+            Have a role where production software, AI workflows, and cloud systems matter?
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--muted)]">
-            Open to software engineering roles across full-stack, AI, backend, cloud, and platform engineering.
+            I&apos;m open to software engineering roles across full-stack, backend/API, AI systems, cloud, and platform engineering. F-1 OPT active, STEM OPT eligible through 2029.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
-            <MagneticButton href={profile.email}>Email</MagneticButton>
+            <MagneticButton href={profile.email}>Email Ruthvik</MagneticButton>
+            <MagneticButton href={resumeHref} label="OPEN RESUME">
+              View Resume
+            </MagneticButton>
             <MagneticButton href={profile.github} external label="VIEW GITHUB">
               GitHub
             </MagneticButton>
             <MagneticButton href={profile.linkedin} external label="VIEW LINKEDIN">
               LinkedIn
-            </MagneticButton>
-            <MagneticButton href={resumeHref} label="OPEN PDF">
-              Resume
             </MagneticButton>
           </div>
         </div>

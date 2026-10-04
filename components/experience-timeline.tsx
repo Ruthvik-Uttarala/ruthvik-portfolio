@@ -17,8 +17,8 @@ export function ExperienceTimeline() {
   return (
     <section id="experience" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
       <SectionHeading
-        eyebrow="Evidence log"
-        title="Implementation records from shipped work."
+        eyebrow="Implementation record"
+        title="Production constraints, scale, and ownership."
         subtitle="Operator dashboards, AI pipelines, API systems, cloud delivery, and reliability improvements."
       />
       <div ref={wrapperRef} className="relative mt-8">

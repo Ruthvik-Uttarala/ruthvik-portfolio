@@ -61,6 +61,11 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
 
         <p className="text-sm leading-relaxed text-[var(--text)]">{project.buildResult}</p>
 
+        <div className="border border-[var(--line)] bg-[rgba(223,245,92,0.08)] px-3 py-3">
+          <p className="mono-label text-[var(--lime)]">Recruiter signal</p>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--text)]">{project.recruiterSignal}</p>
+        </div>
+
         <div className="grid gap-2 sm:grid-cols-3">
           {project.metrics.map((metric) => (
             <span

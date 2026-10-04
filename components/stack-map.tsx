@@ -18,8 +18,8 @@ export function StackMap() {
     <section id="stack" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
       <SectionHeading
         eyebrow="Systems matrix"
-        title="Tools arranged like evidence tags."
-        subtitle="Frontend, backend, cloud, data, AI, and delivery systems I use to ship production software."
+        title="Tools mapped to role fit."
+        subtitle="Grouped by the kind of production work they support: interfaces, services, infrastructure, data, AI workflows, and observability."
       />
       <div className="grid gap-4 md:grid-cols-12">
         {stackGroups.map((group, index) => (
@@ -39,6 +39,7 @@ export function StackMap() {
             <div className="relative">
               <p className="mono-label opacity-75">Group {String(index + 1).padStart(2, "0")}</p>
               <h3 className="mt-2 text-3xl font-black tracking-tight">{group.name}</h3>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-80">{group.description}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {group.tools.map((tool) => (
                   <span

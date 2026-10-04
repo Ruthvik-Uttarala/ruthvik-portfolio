@@ -9,6 +9,7 @@ export type Project = {
   demoUrl?: string;
   badge: string;
   metrics: string[];
+  recruiterSignal: string;
 };
 
 export type ExperienceItem = {
@@ -18,6 +19,12 @@ export type ExperienceItem = {
   context: string;
   outcomes: string[];
   technologies: string[];
+};
+
+export type StackGroup = {
+  name: string;
+  description: string;
+  tools: string[];
 };
 
 export const profile = {
@@ -66,6 +73,8 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Ruthvik-Uttarala/silvervisit-ai",
     badge: "90% task completion",
     metrics: ["40+ workflows", "35% lower navigation failure risk", "guarded UI actions"],
+    recruiterSignal:
+      "Shows AI product judgment: guarded automation, accessibility-minded workflows, and measurable task completion.",
   },
   {
     id: "flowwick",
@@ -78,7 +87,9 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Supabase", "Shopify API", "Instagram Graph API", "OpenAI", "Gemini"],
     repoUrl: "https://github.com/Ruthvik-Uttarala/FlowCart",
     badge: "<90s/item",
-    metrics: ["95% structured API success", "25 product batches", "input to publish pipeline"],
+    metrics: ["10m to <90s/item", "95% success across 25 batches", "input to publish pipeline"],
+    recruiterSignal:
+      "Shows full-stack delivery: typed API orchestration, publishing workflows, and practical automation speedups.",
   },
   {
     id: "novaarchitect",
@@ -92,6 +103,8 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Ruthvik-Uttarala/nova-architect",
     badge: "30% savings",
     metrics: ["5 simulations", "70% faster infrastructure decisions", "risk + cost reports"],
+    recruiterSignal:
+      "Shows cloud/platform thinking: infrastructure tradeoffs made visible through cost, risk, and decision metrics.",
   },
   {
     id: "orbit",
@@ -105,6 +118,8 @@ export const projects: Project[] = [
     repoUrl: "https://gitlab.com/gitlab-ai-hackathon-group1/gitlab-ai-hackathon-project.git",
     badge: "50 deployment runs",
     metrics: ["4-stage workflow", "60% faster release decisions", "1s status polling"],
+    recruiterSignal:
+      "Shows release ownership: deployment status, verification, and reporting brought into one reliable workflow.",
   },
 ];
 
@@ -167,29 +182,35 @@ export const principles = [
   },
 ];
 
-export const stackGroups = [
+export const stackGroups: StackGroup[] = [
   {
     name: "Frontend",
+    description: "Interfaces and dashboards for operators, customers, and mobile users.",
     tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native", "Angular", "Vue.js"],
   },
   {
-    name: "Backend",
+    name: "Backend/API",
+    description: "Services, workers, integrations, and typed APIs behind production workflows.",
     tools: ["Python", "Java", "Node.js", "Flask", "FastAPI", "Spring", "REST APIs", "GraphQL", "gRPC", "microservices"],
   },
   {
-    name: "Cloud",
+    name: "Cloud/Platform",
+    description: "Deployments, reliability, storage, compute, and cloud operating constraints.",
     tools: ["AWS", "Azure", "Google Cloud", "S3", "Lambda", "ECS", "CloudWatch", "Cloud Run"],
   },
   {
     name: "Databases",
+    description: "Relational, document, realtime, cache, and offline data paths.",
     tools: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Supabase", "Redis", "DynamoDB", "SQLite"],
   },
   {
-    name: "AI and ML",
+    name: "AI/ML",
+    description: "LLM, agentic, RAG, and computer vision workflows with measurable outputs.",
     tools: ["LLMs", "OpenAI", "Gemini", "Vertex AI", "Amazon Bedrock", "Nova", "Computer Vision", "RAG"],
   },
   {
-    name: "DevOps",
+    name: "DevOps/Observability",
+    description: "CI/CD, containers, queues, monitoring, and production feedback loops.",
     tools: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins", "CI/CD", "Linux", "Kafka", "RabbitMQ", "Datadog", "Splunk"],
   },
 ];
