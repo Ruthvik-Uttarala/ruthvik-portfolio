@@ -105,6 +105,7 @@ export function Nav() {
             </a>
             <a
               href={resumeHref}
+              download="Ruthvik_Uttarala_Resume.pdf"
               className="inline-flex border border-[var(--line)] bg-[var(--panel)] px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.08em] text-[var(--text)] transition hover:border-[var(--lime)] hover:bg-[var(--lime)] hover:text-[var(--panel)]"
             >
               Resume

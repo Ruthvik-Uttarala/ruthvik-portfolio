@@ -44,7 +44,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       ].join(" ")}
     >
       <motion.div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: glow }} />
-      <div className="relative z-10 flex h-full flex-col gap-5">
+      <div className="relative z-10 flex flex-col gap-5">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--line)] pb-4">
           <p className="mono-label text-[var(--muted)]">{project.category}</p>
           <span className="border border-[var(--lime)] bg-[var(--lime)] px-2.5 py-1 font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--panel)]">
@@ -88,7 +88,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           ))}
         </ul>
 
-        <div className="mt-auto flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <a
             href={project.repoUrl}
             target="_blank"

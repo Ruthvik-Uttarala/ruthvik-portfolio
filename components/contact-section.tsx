@@ -15,7 +15,7 @@ export function ContactSection() {
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <MagneticButton href={profile.email}>Email Ruthvik</MagneticButton>
-            <MagneticButton href={resumeHref} label="OPEN RESUME">
+            <MagneticButton href={resumeHref} download="Ruthvik_Uttarala_Resume.pdf" label="OPEN RESUME">
               View Resume
             </MagneticButton>
             <MagneticButton href={profile.github} external label="VIEW GITHUB">

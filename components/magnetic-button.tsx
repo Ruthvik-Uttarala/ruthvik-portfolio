@@ -10,9 +10,10 @@ type MagneticButtonProps = {
   className?: string;
   label?: string;
   external?: boolean;
+  download?: string;
 };
 
-export function MagneticButton({ href, children, className, label, external }: MagneticButtonProps) {
+export function MagneticButton({ href, children, className, label, external, download }: MagneticButtonProps) {
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -37,12 +38,13 @@ export function MagneticButton({ href, children, className, label, external }: M
     className ??
     "inline-flex items-center justify-center border border-[var(--line)] bg-[var(--panel)] px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-[0.08em] text-[var(--text)] transition-colors hover:border-[var(--lime)] hover:bg-[var(--lime)] hover:text-[var(--panel)]";
 
-  if (external) {
+  if (external || download) {
     return (
       <motion.a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        download={download}
         style={{ x: xSpring, y: ySpring }}
         onMouseMove={onMove}
         onMouseLeave={onLeave}

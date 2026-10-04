@@ -10,9 +10,9 @@ import { profile, resumeHref } from "@/data/portfolio";
 export function Hero() {
   return (
     <section id="top" className="relative px-4 pt-24 pb-8 sm:px-6 sm:pt-28">
-      <div className="mx-auto grid w-full max-w-[1430px] auto-rows-[minmax(150px,auto)] grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
-        <Tile delay={0.04} className="lime-panel min-h-[390px] p-5 md:col-span-4 md:row-span-2 lg:min-h-[430px]">
-          <div className="flex h-full flex-col justify-between gap-8">
+      <div className="mx-auto grid w-full max-w-[1430px] grid-cols-1 items-start gap-4 md:grid-cols-12 md:gap-5">
+        <Tile delay={0.04} className="lime-panel p-5 md:col-span-4">
+          <div className="flex flex-col justify-between gap-10">
             <div>
               <p className="pixel-title text-[clamp(3.1rem,7.2vw,6.3rem)]">RUTHVIK</p>
               <p className="mt-4 font-mono text-[clamp(1.1rem,2vw,1.7rem)] font-black uppercase leading-none tracking-normal">
@@ -26,12 +26,12 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.1} className="dark-panel p-5 md:col-span-5 md:row-span-2">
+        <Tile delay={0.1} className="dark-panel p-5 md:col-span-5">
           <WorkSignalBoard />
         </Tile>
 
-        <Tile delay={0.16} className="cream-panel min-h-[390px] overflow-hidden md:col-span-3 md:row-span-2">
-          <div className="relative h-[310px] border-b border-[#c9cfc4] md:h-[360px]">
+        <Tile delay={0.16} className="cream-panel overflow-hidden md:col-span-3">
+          <div className="relative h-[280px] border-b border-[#c9cfc4] md:h-[310px]">
             <Image
               src="/ruthvik-headshot.jpg"
               alt="Ruthvik Uttarala"
@@ -53,11 +53,11 @@ export function Hero() {
         </Tile>
 
         <Tile delay={0.22} className="cream-panel p-5 md:col-span-4">
-          <div className="flex h-full flex-col gap-5">
+          <div className="flex flex-col gap-4">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <p className="mono-label text-[var(--green)]">Current focus</p>
-                <h2 className="mt-4 text-5xl font-black uppercase leading-none text-[var(--slate)]">Current focus</h2>
+                <h2 className="mt-3 text-4xl font-black uppercase leading-none text-[var(--slate)]">Current focus</h2>
               </div>
               <span className="border border-[var(--panel)] px-2 font-mono text-xl leading-none text-[var(--panel)]">×</span>
             </div>
@@ -81,7 +81,7 @@ export function Hero() {
 
         <Tile delay={0.28} className="dark-panel p-5 md:col-span-4">
           <p className="mono-label text-[var(--lime)]">Core stack</p>
-          <div className="mt-5 grid gap-2">
+          <div className="mt-4 grid gap-2">
             {[
               ["Frontend", "React, Next.js, TypeScript"],
               ["Backend", "Python, Java, REST APIs"],
@@ -94,14 +94,14 @@ export function Hero() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">
+          <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
             Preferred work: production systems, APIs, AI workflows, and cloud infrastructure with clear metrics.
           </p>
         </Tile>
 
         <Tile delay={0.34} className="bg-[var(--lavender)] p-5 text-[#6f6389] md:col-span-4">
           <p className="mono-label">At a glance</p>
-          <div className="mt-5 grid gap-2 sm:grid-cols-2">
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
             {[
               ["OPT", "STEM OPT through 2029"],
               ["CS", "Penn State CS"],
@@ -123,7 +123,7 @@ export function Hero() {
               <p className="mt-2 text-xl font-black tracking-tight text-[var(--text)]">Review proof, resume, or reach out.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <MagneticButton href={resumeHref} label="OPEN RESUME">View Resume</MagneticButton>
+              <MagneticButton href={resumeHref} download="Ruthvik_Uttarala_Resume.pdf" label="OPEN RESUME">View Resume</MagneticButton>
               <MagneticButton href={profile.github} external label="VIEW GITHUB">GitHub</MagneticButton>
               <MagneticButton href={profile.linkedin} external label="VIEW LINKEDIN">LinkedIn</MagneticButton>
               <MagneticButton href={profile.instagram} external label="OPEN INSTAGRAM">Instagram</MagneticButton>

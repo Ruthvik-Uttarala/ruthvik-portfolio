@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 
 const layoutClasses = [
-  "md:col-span-7 md:row-span-2",
+  "md:col-span-7",
   "md:col-span-5",
   "md:col-span-5",
   "md:col-span-7",
@@ -17,7 +17,7 @@ export function ProjectGrid() {
         title="Built under real constraints."
         subtitle="AI, cloud, deployment, and workflow systems with measurable outcomes."
       />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
+      <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-12 md:gap-5">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}

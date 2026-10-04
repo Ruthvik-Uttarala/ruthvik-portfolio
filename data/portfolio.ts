@@ -44,7 +44,7 @@ export const profile = {
   location: "United States",
 };
 
-export const resumeHref = "/resume";
+export const resumeHref = "/resume.pdf";
 
 export const navItems = [
   { id: "work", label: "Work" },
