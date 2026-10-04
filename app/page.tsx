@@ -1,6 +1,7 @@
 import { ContactSection } from "@/components/contact-section";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { Hero } from "@/components/hero";
+import { InstagramRail } from "@/components/instagram-rail";
 import { Nav } from "@/components/nav";
 import { Principles } from "@/components/principles";
 import { ProjectGrid } from "@/components/project-grid";
@@ -28,6 +29,7 @@ export default function Home() {
 
         <Principles />
         <ProjectGrid />
+        <InstagramRail />
         <ExperienceTimeline />
         <StackMap />
         <ContactSection />

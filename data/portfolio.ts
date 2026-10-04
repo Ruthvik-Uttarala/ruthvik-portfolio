@@ -9,7 +9,7 @@ export type Project = {
   demoUrl?: string;
   badge: string;
   metrics: string[];
-  recruiterSignal: string;
+  proofNote: string;
 };
 
 export type ExperienceItem = {
@@ -40,6 +40,7 @@ export const profile = {
   email: "mailto:uttaralaruthvik@gmail.com",
   github: "https://github.com/Ruthvik-Uttarala",
   linkedin: "https://www.linkedin.com/in/ruthvik-uttarala-09918a251/",
+  instagram: "https://www.instagram.com/ruuttarala/",
   location: "United States",
 };
 
@@ -73,7 +74,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Ruthvik-Uttarala/silvervisit-ai",
     badge: "90% task completion",
     metrics: ["40+ workflows", "35% lower navigation failure risk", "guarded UI actions"],
-    recruiterSignal:
+    proofNote:
       "Shows AI product judgment: guarded automation, accessibility-minded workflows, and measurable task completion.",
   },
   {
@@ -88,7 +89,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Ruthvik-Uttarala/FlowCart",
     badge: "<90s/item",
     metrics: ["10m to <90s/item", "95% success across 25 batches", "input to publish pipeline"],
-    recruiterSignal:
+    proofNote:
       "Shows full-stack delivery: typed API orchestration, publishing workflows, and practical automation speedups.",
   },
   {
@@ -103,7 +104,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Ruthvik-Uttarala/nova-architect",
     badge: "30% savings",
     metrics: ["5 simulations", "70% faster infrastructure decisions", "risk + cost reports"],
-    recruiterSignal:
+    proofNote:
       "Shows cloud/platform thinking: infrastructure tradeoffs made visible through cost, risk, and decision metrics.",
   },
   {
@@ -118,8 +119,29 @@ export const projects: Project[] = [
     repoUrl: "https://gitlab.com/gitlab-ai-hackathon-group1/gitlab-ai-hackathon-project.git",
     badge: "50 deployment runs",
     metrics: ["4-stage workflow", "60% faster release decisions", "1s status polling"],
-    recruiterSignal:
+    proofNote:
       "Shows release ownership: deployment status, verification, and reporting brought into one reliable workflow.",
+  },
+];
+
+export const instagramItems = [
+  {
+    title: "Recent motion",
+    url: "https://www.instagram.com/ruuttarala/",
+    type: "Instagram",
+    caption: "Short videos, updates, and behind-the-scenes clips from what I am building and where I am headed.",
+  },
+  {
+    title: "Build notes",
+    url: "https://www.instagram.com/ruuttarala/",
+    type: "Instagram",
+    caption: "A more informal look at projects, learning, launches, and the work around the work.",
+  },
+  {
+    title: "Outside the repo",
+    url: "https://www.instagram.com/ruuttarala/",
+    type: "Instagram",
+    caption: "Personal updates and short-form clips beyond the portfolio case studies.",
   },
 ];
 

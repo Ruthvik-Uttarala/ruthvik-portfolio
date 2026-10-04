@@ -26,7 +26,7 @@ const signalGroups = [
   },
   {
     id: "backend",
-    label: "Backend/API",
+    label: "APIs",
     rows: [
       {
         label: "Event scale",
@@ -47,7 +47,7 @@ const signalGroups = [
   },
   {
     id: "ai",
-    label: "AI Systems",
+    label: "AI Workflows",
     rows: [
       {
         label: "Guided task completion",
@@ -68,7 +68,7 @@ const signalGroups = [
   },
   {
     id: "cloud",
-    label: "Cloud/Platform",
+    label: "Cloud Systems",
     rows: [
       {
         label: "Response speed",
@@ -89,7 +89,7 @@ const signalGroups = [
   },
 ];
 
-export function RecruiterSignalBoard() {
+export function WorkSignalBoard() {
   const [activeId, setActiveId] = useState(signalGroups[0].id);
   const active = signalGroups.find((group) => group.id === activeId) ?? signalGroups[0];
 
@@ -97,15 +97,18 @@ export function RecruiterSignalBoard() {
     <div className="h-full">
       <div className="mb-6 flex items-start justify-between gap-4">
         <div>
-          <p className="mono-label text-[var(--muted)]">Recruiter signal board</p>
+          <p className="mono-label text-[var(--muted)]">Full stack / AI / cloud</p>
           <h1 className="mt-3 text-3xl font-black uppercase leading-none tracking-normal sm:text-4xl">
-            Hiring signals
+            What I&apos;ve shipped
           </h1>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
+            Real systems, real metrics, production constraints.
+          </p>
         </div>
         <span className="grid size-10 shrink-0 place-items-center border border-[var(--cream)] font-mono text-xl leading-none">▣</span>
       </div>
 
-      <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4" role="tablist" aria-label="Hiring signal categories">
+      <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4" role="tablist" aria-label="Work categories">
         {signalGroups.map((group) => {
           const activeTab = group.id === activeId;
           return (

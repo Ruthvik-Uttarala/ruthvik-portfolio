@@ -96,6 +96,14 @@ export function Nav() {
               LinkedIn
             </a>
             <a
+              href={profile.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden px-2.5 py-1.5 font-mono text-xs text-[var(--muted)] transition hover:text-[var(--text)] lg:inline-flex"
+            >
+              Instagram
+            </a>
+            <a
               href={resumeHref}
               className="inline-flex border border-[var(--line)] bg-[var(--panel)] px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.08em] text-[var(--text)] transition hover:border-[var(--lime)] hover:bg-[var(--lime)] hover:text-[var(--panel)]"
             >

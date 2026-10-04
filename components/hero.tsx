@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { type ReactNode } from "react";
 import { MagneticButton } from "@/components/magnetic-button";
-import { RecruiterSignalBoard } from "@/components/recruiter-signal-board";
+import { WorkSignalBoard } from "@/components/work-signal-board";
 import { profile, resumeHref } from "@/data/portfolio";
 
 export function Hero() {
@@ -27,7 +27,7 @@ export function Hero() {
         </Tile>
 
         <Tile delay={0.1} className="dark-panel p-5 md:col-span-5 md:row-span-2">
-          <RecruiterSignalBoard />
+          <WorkSignalBoard />
         </Tile>
 
         <Tile delay={0.16} className="cream-panel min-h-[390px] overflow-hidden md:col-span-3 md:row-span-2">
@@ -42,9 +42,12 @@ export function Hero() {
             />
           </div>
           <div className="p-4">
-            <p className="mono-label text-[var(--green)]">Candidate profile</p>
+            <p className="mono-label text-[var(--green)]">Profile</p>
             <p className="mt-3 text-sm leading-relaxed text-[#5f665d]">
               Full-stack, backend/API, AI systems, and cloud/platform engineering.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#5f665d]">
+              Penn State CS. AWS ML + AI certified. OPT active, STEM OPT eligible through 2029.
             </p>
           </div>
         </Tile>
@@ -53,17 +56,20 @@ export function Hero() {
           <div className="flex h-full flex-col justify-between gap-7">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="mono-label text-[var(--green)]">Role fit</p>
-                <h2 className="mt-4 text-5xl font-black uppercase leading-none text-[var(--slate)]">Now in focus</h2>
+                <p className="mono-label text-[var(--green)]">Current focus</p>
+                <h2 className="mt-4 text-5xl font-black uppercase leading-none text-[var(--slate)]">Current focus</h2>
               </div>
               <span className="border border-[var(--panel)] px-2 font-mono text-xl leading-none text-[var(--panel)]">×</span>
             </div>
+            <p className="text-sm leading-relaxed text-[#5f665d]">
+              Software engineering roles across full-stack, backend/API, AI systems, and cloud/platform.
+            </p>
             <div className="grid grid-cols-2 gap-4 font-mono text-xs font-bold uppercase leading-tight text-[var(--panel)]">
               <p>Scope:<br />Software engineering</p>
               <p>Method:<br />Full stack + AI + cloud</p>
             </div>
             <div className="grid gap-2 text-xs font-bold uppercase text-[var(--panel)] sm:grid-cols-2">
-              {["Production APIs", "Cloud reliability", "AI workflow systems", "Measurable outcomes"].map((signal) => (
+              {["Production APIs", "Operator Dashboards", "AI Workflow Systems", "Cloud Reliability", "Measurable Outcomes"].map((signal) => (
                 <span key={signal} className="border border-[#c9cfc4] px-3 py-2">{signal}</span>
               ))}
             </div>
@@ -71,7 +77,7 @@ export function Hero() {
         </Tile>
 
         <Tile delay={0.28} className="dark-panel min-h-[315px] p-5 md:col-span-4">
-          <p className="mono-label text-[var(--lime)]">Strongest stacks</p>
+          <p className="mono-label text-[var(--lime)]">Core stack</p>
           <div className="mt-5 flex flex-wrap gap-2">
             {["TypeScript", "React", "Next.js", "Python", "Java", "REST APIs", "PostgreSQL", "AWS", "Docker", "Kubernetes"].map((tool) => (
               <span key={tool} className="border border-[var(--line)] bg-[rgba(239,241,229,0.06)] px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--text)]">
@@ -85,13 +91,13 @@ export function Hero() {
         </Tile>
 
         <Tile delay={0.34} className="bg-[var(--lavender)] p-5 text-[#6f6389] md:col-span-4">
-          <p className="mono-label">Recruiter quick scan</p>
+          <p className="mono-label">At a glance</p>
           <div className="mt-5 grid gap-2 sm:grid-cols-2">
             {[
               ["OPT", "STEM OPT through 2029"],
               ["CS", "Penn State CS"],
               ["AWS", "ML Engineer + AI Practitioner"],
-              ["Links", "Email / GitHub / LinkedIn"],
+              ["Links", "GitHub / LinkedIn / Resume"],
             ].map(([label, value]) => (
               <div key={label} className="border border-current/20 bg-white/20 px-3 py-3">
                 <p className="font-mono text-xs font-black uppercase">{label}</p>
@@ -104,13 +110,14 @@ export function Hero() {
         <Tile delay={0.4} className="dark-panel p-5 md:col-span-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="mono-label text-[var(--muted)]">Next step</p>
+              <p className="mono-label text-[var(--muted)]">Let&apos;s connect</p>
               <p className="mt-2 text-xl font-black tracking-tight text-[var(--text)]">Review proof, resume, or reach out.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <MagneticButton href={resumeHref} label="OPEN RESUME">View Resume</MagneticButton>
               <MagneticButton href={profile.github} external label="VIEW GITHUB">GitHub</MagneticButton>
               <MagneticButton href={profile.linkedin} external label="VIEW LINKEDIN">LinkedIn</MagneticButton>
+              <MagneticButton href={profile.instagram} external label="OPEN INSTAGRAM">Instagram</MagneticButton>
               <MagneticButton href={profile.email} label="EMAIL">Email</MagneticButton>
             </div>
           </div>

@@ -11,7 +11,7 @@ export function ContactSection() {
             Have a role where production software, AI workflows, and cloud systems matter?
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--muted)]">
-            I&apos;m open to software engineering roles across full-stack, backend/API, AI systems, cloud, and platform engineering. F-1 OPT active, STEM OPT eligible through 2029.
+            I&apos;m open to software engineering roles across full-stack, backend/API, AI systems, cloud, and platform engineering. I also share short videos and updates on Instagram.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <MagneticButton href={profile.email}>Email Ruthvik</MagneticButton>
@@ -23,6 +23,9 @@ export function ContactSection() {
             </MagneticButton>
             <MagneticButton href={profile.linkedin} external label="VIEW LINKEDIN">
               LinkedIn
+            </MagneticButton>
+            <MagneticButton href={profile.instagram} external label="OPEN INSTAGRAM">
+              Instagram
             </MagneticButton>
           </div>
         </div>
