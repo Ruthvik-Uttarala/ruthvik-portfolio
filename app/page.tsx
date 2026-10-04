@@ -1,5 +1,4 @@
 import { ContactSection } from "@/components/contact-section";
-import { CustomCursor } from "@/components/custom-cursor";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { Hero } from "@/components/hero";
 import { Nav } from "@/components/nav";
@@ -11,27 +10,26 @@ import { credentials } from "@/data/portfolio";
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <CustomCursor />
       <Nav />
       <main>
         <div className="pointer-events-none absolute inset-0 scan-grid opacity-25" />
         <div className="pointer-events-none absolute inset-0 grain opacity-[0.18]" />
         <Hero />
-        <ProjectGrid />
-        <ExperienceTimeline />
-        <Principles />
-        <StackMap />
 
-        <section className="border-y border-[var(--line)] bg-[color:var(--surface)] py-5">
-          <div className="mx-auto flex w-full max-w-[1200px] flex-wrap gap-x-8 gap-y-2 px-5 sm:px-8">
+        <section className="mx-auto w-full max-w-[1430px] px-4 py-8 sm:px-6">
+          <div className="evidence-card cream-panel grid gap-3 p-4 sm:grid-cols-2 lg:grid-cols-6">
             {credentials.map((item) => (
-              <p key={item} className="text-sm text-[var(--muted)]">
+              <p key={item} className="mono-label leading-tight text-[var(--green)]">
                 {item}
               </p>
             ))}
           </div>
         </section>
 
+        <Principles />
+        <ProjectGrid />
+        <ExperienceTimeline />
+        <StackMap />
         <ContactSection />
       </main>
     </div>

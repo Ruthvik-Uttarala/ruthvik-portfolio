@@ -11,9 +11,9 @@ export function SectionHeading({ eyebrow, title, subtitle, align = "left" }: Sec
   return (
     <header className={`mb-10 flex max-w-3xl flex-col gap-4 ${alignment}`}>
       {eyebrow ? (
-        <p className="font-mono text-[11px] tracking-[0.2em] text-[var(--muted)] uppercase">{eyebrow}</p>
+        <p className="mono-label text-[var(--lime)]">{eyebrow}</p>
       ) : null}
-      <h2 className="text-balance text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">{title}</h2>
+      <h2 className="text-balance text-3xl font-black tracking-tight text-[var(--text)] sm:text-5xl">{title}</h2>
       {subtitle ? <p className="text-pretty text-base leading-relaxed text-[var(--muted)]">{subtitle}</p> : null}
     </header>
   );

@@ -1,66 +1,57 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
-import { useMemo, useState } from "react";
+import { motion } from "motion/react";
 import { stackGroups } from "@/data/portfolio";
 import { SectionHeading } from "@/components/section-heading";
 
+const panelClasses = [
+  "dark-panel",
+  "cream-panel",
+  "bg-[var(--lavender)] text-[#6f6389]",
+  "dark-panel",
+  "lime-panel",
+  "cream-panel",
+];
+
 export function StackMap() {
-  const [active, setActive] = useState(0);
-  const reduce = useReducedMotion();
-
-  const lines = useMemo(() => {
-    if (reduce) return [];
-    return stackGroups.flatMap((group, groupIndex) =>
-      group.tools.map((_, toolIndex) => ({
-        id: `${group.name}-${toolIndex}`,
-        x1: 8 + groupIndex * 30,
-        y1: 16 + toolIndex * 9,
-        x2: 72 - groupIndex * 7,
-        y2: 20 + toolIndex * 6,
-      })),
-    );
-  }, [reduce]);
-
   return (
     <section id="stack" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
-      <SectionHeading eyebrow="Stack map" title="Tools I build with" />
-      <div className="relative overflow-hidden rounded-md border border-[var(--line)] bg-[color:var(--surface)] p-5 sm:p-7">
-        <svg className="pointer-events-none absolute inset-0 size-full opacity-45">
-          {lines.map((line) => (
-            <line
-              key={line.id}
-              x1={`${line.x1}%`}
-              y1={`${line.y1}%`}
-              x2={`${line.x2}%`}
-              y2={`${line.y2}%`}
-              stroke={active % 2 ? "rgba(157,168,185,0.45)" : "rgba(223,245,92,0.35)"}
-              strokeWidth={1}
-            />
-          ))}
-        </svg>
-        <div className="relative grid gap-3 md:grid-cols-2">
-          {stackGroups.map((group, index) => (
-            <motion.article
-              key={group.name}
-              onMouseEnter={() => setActive(index)}
-              className="rounded-md border border-[var(--line)] bg-[color:var(--surface-elev)] p-4"
-              animate={{ borderColor: active === index ? "rgba(223,245,92,0.55)" : "rgba(255,255,255,0.12)" }}
-            >
-              <h3 className="mb-3 font-mono text-xs tracking-[0.12em] text-[var(--muted)] uppercase">{group.name}</h3>
-              <div className="flex flex-wrap gap-2">
+      <SectionHeading
+        eyebrow="Systems matrix"
+        title="Tools arranged like evidence tags."
+        subtitle="Frontend, backend, cloud, data, AI, and delivery systems I use to ship production software."
+      />
+      <div className="grid gap-4 md:grid-cols-12">
+        {stackGroups.map((group, index) => (
+          <motion.article
+            key={group.name}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-8% 0px -10% 0px" }}
+            transition={{ duration: 0.42, delay: index * 0.04 }}
+            className={[
+              "evidence-card relative overflow-hidden p-5",
+              panelClasses[index % panelClasses.length],
+              index === 1 || index === 4 ? "md:col-span-7" : "md:col-span-5",
+            ].join(" ")}
+          >
+            <div className="absolute inset-x-0 top-0 h-12 scan-row opacity-20" />
+            <div className="relative">
+              <p className="mono-label opacity-75">Group {String(index + 1).padStart(2, "0")}</p>
+              <h3 className="mt-2 text-3xl font-black tracking-tight">{group.name}</h3>
+              <div className="mt-6 flex flex-wrap gap-2">
                 {group.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="border border-[var(--line)] px-2 py-1 font-mono text-[10px] tracking-[0.08em] text-[var(--text)] uppercase"
+                    className="border border-current/20 bg-black/[0.04] px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em]"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
-            </motion.article>
-          ))}
-        </div>
+            </div>
+          </motion.article>
+        ))}
       </div>
     </section>
   );

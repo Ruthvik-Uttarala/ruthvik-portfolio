@@ -1,21 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #332d2d;
-  --ink: #111312;
-  --text: #f1f4e8;
-  --muted: #b8b8ac;
-  --accent: #dff55c;
-  --accent-ink: #0f5a4c;
-  --accent-soft: rgba(223, 245, 92, 0.36);
-  --steel: #9da8b9;
+  --bg: #342d2d;
+  --bg-soft: #403837;
+  --panel: #111312;
+  --panel-soft: #1c1e1a;
+  --cream: #eff1e5;
+  --lime: #dff55c;
+  --lime-strong: #eaff35;
   --lavender: #ead8ff;
-  --paper: #eff1e5;
-  --line: rgba(241, 244, 232, 0.18);
-  --line-soft: rgba(241, 244, 232, 0.08);
-  --surface: rgba(17, 19, 18, 0.84);
+  --slate: #9da8b9;
+  --green: #0f5a4c;
+  --text: #f3f4ea;
+  --muted: #b9b7aa;
+  --line: rgba(243, 244, 234, 0.16);
+  --line-strong: rgba(243, 244, 234, 0.34);
+  --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.28);
+
+  --ink: var(--panel);
+  --accent: var(--lime);
+  --accent-ink: var(--green);
+  --accent-soft: rgba(223, 245, 92, 0.36);
+  --steel: var(--slate);
+  --paper: var(--cream);
+  --line-soft: rgba(243, 244, 234, 0.07);
+  --surface: rgba(17, 19, 18, 0.86);
   --surface-elev: rgba(239, 241, 229, 0.08);
-  --surface-hover: rgba(223, 245, 92, 0.16);
+  --surface-hover: rgba(223, 245, 92, 0.15);
   --surface-transparent: rgba(17, 19, 18, 0.78);
 }
 
@@ -26,30 +37,73 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-geist-sans), "Inter", ui-sans-serif, system-ui;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(223, 245, 92, 0.07), transparent 28rem),
+    radial-gradient(circle at 78% 18%, rgba(234, 216, 255, 0.08), transparent 24rem),
+    linear-gradient(135deg, #2f2929 0%, var(--bg) 48%, #292424 100%);
+  color: var(--text);
+  font-family: var(--font-geist-sans), "Inter", ui-sans-serif, system-ui;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--panel);
+}
+
 .grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.13) 0.5px, transparent 0.5px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 0.5px, transparent 0.5px);
   background-size: 2px 2px;
 }
 
-.pixel-word {
+.pixel-title,
+.pixel-word,
+.dot-title {
   font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
   font-weight: 900;
   line-height: 0.82;
   letter-spacing: 0;
   text-transform: uppercase;
   text-shadow:
-    0.055em 0 currentColor,
-    0.11em 0 currentColor;
+    0.052em 0 currentColor,
+    0.104em 0 currentColor;
+}
+
+.mono-label {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.soft-border {
+  border: 1px solid var(--line);
+}
+
+.evidence-card {
+  border: 1px solid var(--line);
+  border-radius: 0.375rem;
+  box-shadow: var(--shadow-card);
+}
+
+.lime-panel {
+  background: var(--lime);
+  color: var(--green);
+}
+
+.cream-panel {
+  background: var(--cream);
+  color: var(--panel);
+}
+
+.dark-panel {
+  background: var(--panel);
+  color: var(--text);
 }
 
 .dot-grid {
@@ -64,6 +118,11 @@ html {
   background-size: 32px 32px;
 }
 
+.scan-row {
+  background-image: linear-gradient(90deg, currentColor 0 62%, transparent 62% 100%);
+  background-size: 13px 100%;
+}
+
 a,
 button {
   outline: none;
@@ -71,8 +130,7 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  box-shadow: 0 0 0 2px rgba(224, 151, 92, 0.4);
-  border-radius: 10px;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--lime);
 }
 
 @media (prefers-reduced-motion: reduce) {

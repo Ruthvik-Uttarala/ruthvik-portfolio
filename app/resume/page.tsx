@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { credentials, experiences, projects, profile, stackGroups } from "@/data/portfolio";
 
 export const metadata = {
@@ -8,9 +9,9 @@ export const metadata = {
 export default function ResumePage() {
   return (
     <main className="mx-auto min-h-screen max-w-[960px] px-5 py-10 text-[var(--text)] sm:px-8">
-      <a href="/" className="text-sm text-[var(--muted)] hover:text-[var(--text)]">
+      <Link href="/" className="text-sm text-[var(--muted)] hover:text-[var(--text)]">
         ← Back to portfolio
-      </a>
+      </Link>
 
       <header className="mt-8 border-b border-[var(--line)] pb-6">
         <p className="font-mono text-xs tracking-[0.18em] text-[var(--muted)] uppercase">Resume</p>

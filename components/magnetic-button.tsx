@@ -35,7 +35,7 @@ export function MagneticButton({ href, children, className, label, external }: M
 
   const cls =
     className ??
-    "inline-flex items-center justify-center border border-[var(--line)] px-5 py-2.5 text-sm font-medium text-[var(--text)] transition-colors hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]";
+    "inline-flex items-center justify-center border border-[var(--line)] bg-[var(--panel)] px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-[0.08em] text-[var(--text)] transition-colors hover:border-[var(--lime)] hover:bg-[var(--lime)] hover:text-[var(--panel)]";
 
   if (external) {
     return (
@@ -47,8 +47,7 @@ export function MagneticButton({ href, children, className, label, external }: M
         onMouseMove={onMove}
         onMouseLeave={onLeave}
         className={cls}
-        data-cursor-expand="true"
-        data-cursor-label={label}
+        aria-label={label}
       >
         {children}
       </motion.a>
@@ -57,7 +56,7 @@ export function MagneticButton({ href, children, className, label, external }: M
 
   return (
     <motion.div style={{ x: xSpring, y: ySpring }} onMouseMove={onMove} onMouseLeave={onLeave}>
-      <Link href={href} className={cls} data-cursor-expand="true" data-cursor-label={label}>
+      <Link href={href} className={cls} aria-label={label}>
         {children}
       </Link>
     </motion.div>

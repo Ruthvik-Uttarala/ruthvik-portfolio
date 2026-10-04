@@ -1,36 +1,21 @@
-import Image from "next/image";
 import { principles } from "@/data/portfolio";
 import { SectionHeading } from "@/components/section-heading";
 
 export function Principles() {
   return (
     <section id="about" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
-      <div className="grid gap-8 lg:grid-cols-[1fr_280px] lg:items-end">
-        <SectionHeading
-          eyebrow="Operating method"
-          title="I care about what happens after the demo."
-          subtitle="I build systems where the interface, the model, and the infrastructure all have to work together. A useful AI product is not just a model call - it needs guardrails, observability, clear user states, secure data flows, and a path to production."
-        />
-        <div className="justify-self-start lg:justify-self-end">
-          <div className="relative h-28 w-28 overflow-hidden rounded-md border border-[var(--line)]">
-            <Image
-              src="/ruthvik-headshot.jpg"
-              alt="Ruthvik Uttarala"
-              fill
-              sizes="112px"
-              className="object-cover"
-              priority={false}
-            />
-          </div>
-        </div>
-      </div>
+      <SectionHeading
+        eyebrow="Operating principles"
+        title="What the system has to prove."
+        subtitle="The work is strongest when the interface, model, infrastructure, and metrics explain each other."
+      />
 
       <div className="mt-8 grid gap-4 md:grid-cols-3">
         {principles.map((principle) => (
-          <article key={principle.id} className="rounded-md border border-[var(--line)] bg-[color:var(--paper)] p-5 text-[var(--ink)]">
-            <p className="mb-8 font-mono text-xs font-bold tracking-[0.12em] text-[color:var(--accent-ink)]">{principle.id}</p>
-            <h3 className="mb-2 text-2xl font-black tracking-tight">{principle.title}</h3>
-            <p className="text-sm leading-relaxed text-[var(--muted)]">{principle.copy}</p>
+          <article key={principle.id} className="evidence-card cream-panel p-5">
+            <p className="mb-8 font-mono text-xs font-black tracking-[0.12em] text-[var(--green)]">{principle.id}</p>
+            <h3 className="mb-3 text-2xl font-black tracking-tight">{principle.title}</h3>
+            <p className="text-sm leading-relaxed text-[#5f665d]">{principle.copy}</p>
           </article>
         ))}
       </div>
