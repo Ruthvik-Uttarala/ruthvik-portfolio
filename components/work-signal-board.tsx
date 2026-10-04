@@ -6,6 +6,9 @@ const signalGroups = [
   {
     id: "full-stack",
     label: "Full Stack",
+    visualLabel: "Interface + workflow coverage",
+    litSquares: 44,
+    accent: "bg-[var(--lime)]",
     rows: [
       {
         label: "Product workflows",
@@ -27,6 +30,9 @@ const signalGroups = [
   {
     id: "backend",
     label: "APIs",
+    visualLabel: "Evidence delivery path",
+    litSquares: 34,
+    accent: "bg-[var(--cream)]",
     rows: [
       {
         label: "Event scale",
@@ -48,6 +54,9 @@ const signalGroups = [
   {
     id: "ai",
     label: "AI Workflows",
+    visualLabel: "Model + agent outcomes",
+    litSquares: 48,
+    accent: "bg-[var(--lavender)]",
     rows: [
       {
         label: "Guided task completion",
@@ -69,6 +78,9 @@ const signalGroups = [
   {
     id: "cloud",
     label: "Cloud Systems",
+    visualLabel: "Reliability + infra signal",
+    litSquares: 28,
+    accent: "bg-[var(--slate)]",
     rows: [
       {
         label: "Response speed",
@@ -131,11 +143,17 @@ export function WorkSignalBoard() {
         })}
       </div>
 
+      <div className="mb-2 flex items-center justify-between gap-3">
+        <p className="mono-label text-[var(--muted)]">{active.visualLabel}</p>
+        <p className="font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--lime)]">
+          {active.litSquares}/56 active
+        </p>
+      </div>
       <div className="mb-5 grid [grid-template-columns:repeat(28,minmax(0,1fr))] gap-1" aria-hidden="true">
         {Array.from({ length: 56 }).map((_, index) => (
           <span
             key={index}
-            className={`aspect-square ${index < 40 ? "bg-[var(--cream)]" : "bg-[rgba(243,244,234,0.22)]"}`}
+            className={`aspect-square transition-colors ${index < active.litSquares ? active.accent : "bg-[rgba(243,244,234,0.18)]"}`}
           />
         ))}
       </div>

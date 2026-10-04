@@ -52,8 +52,8 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.22} className="cream-panel min-h-[315px] p-5 md:col-span-4">
-          <div className="flex h-full flex-col justify-between gap-7">
+        <Tile delay={0.22} className="cream-panel p-5 md:col-span-4">
+          <div className="flex h-full flex-col gap-5">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <p className="mono-label text-[var(--green)]">Current focus</p>
@@ -63,6 +63,9 @@ export function Hero() {
             </div>
             <p className="text-sm leading-relaxed text-[#5f665d]">
               Software engineering roles across full-stack, backend/API, AI systems, and cloud/platform.
+            </p>
+            <p className="text-sm leading-relaxed text-[#5f665d]">
+              Best fit: teams shipping production APIs, AI workflows, operator dashboards, cloud reliability, or platform tooling.
             </p>
             <div className="grid grid-cols-2 gap-4 font-mono text-xs font-bold uppercase leading-tight text-[var(--panel)]">
               <p>Scope:<br />Software engineering</p>
@@ -76,13 +79,19 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.28} className="dark-panel min-h-[315px] p-5 md:col-span-4">
+        <Tile delay={0.28} className="dark-panel p-5 md:col-span-4">
           <p className="mono-label text-[var(--lime)]">Core stack</p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {["TypeScript", "React", "Next.js", "Python", "Java", "REST APIs", "PostgreSQL", "AWS", "Docker", "Kubernetes"].map((tool) => (
-              <span key={tool} className="border border-[var(--line)] bg-[rgba(239,241,229,0.06)] px-2.5 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--text)]">
-                {tool}
-              </span>
+          <div className="mt-5 grid gap-2">
+            {[
+              ["Frontend", "React, Next.js, TypeScript"],
+              ["Backend", "Python, Java, REST APIs"],
+              ["Cloud", "AWS, Docker, Kubernetes"],
+              ["Data", "PostgreSQL, Firebase, Supabase"],
+            ].map(([label, value]) => (
+              <div key={label} className="grid gap-2 border border-[var(--line)] bg-[rgba(239,241,229,0.06)] px-3 py-2 sm:grid-cols-[0.45fr_1fr]">
+                <p className="font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--lime)]">{label}</p>
+                <p className="text-sm leading-tight text-[var(--text)]">{value}</p>
+              </div>
             ))}
           </div>
           <p className="mt-6 text-sm leading-relaxed text-[var(--muted)]">
@@ -97,7 +106,7 @@ export function Hero() {
               ["OPT", "STEM OPT through 2029"],
               ["CS", "Penn State CS"],
               ["AWS", "ML Engineer + AI Practitioner"],
-              ["Links", "GitHub / LinkedIn / Resume"],
+              ["Links", "GitHub / LinkedIn / Instagram / Resume"],
             ].map(([label, value]) => (
               <div key={label} className="border border-current/20 bg-white/20 px-3 py-3">
                 <p className="font-mono text-xs font-black uppercase">{label}</p>

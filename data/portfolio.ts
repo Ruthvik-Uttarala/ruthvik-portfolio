@@ -50,6 +50,7 @@ export const navItems = [
   { id: "work", label: "Work" },
   { id: "experience", label: "Experience" },
   { id: "stack", label: "Stack" },
+  { id: "motion", label: "Motion" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -124,24 +125,27 @@ export const projects: Project[] = [
   },
 ];
 
-export const instagramItems = [
+export const instagramReels = [
   {
+    id: "reel-1",
     title: "Recent motion",
+    caption: "Short updates and clips from what I am building.",
     url: "https://www.instagram.com/ruuttarala/",
-    type: "Instagram",
-    caption: "Short videos, updates, and behind-the-scenes clips from what I am building and where I am headed.",
+    embedUrl: "PASTE_REEL_URL_HEREembed",
   },
   {
+    id: "reel-2",
     title: "Build notes",
+    caption: "Projects, learning, launches, and behind-the-scenes work.",
     url: "https://www.instagram.com/ruuttarala/",
-    type: "Instagram",
-    caption: "A more informal look at projects, learning, launches, and the work around the work.",
+    embedUrl: "PASTE_REEL_URL_HEREembed",
   },
   {
+    id: "reel-3",
     title: "Outside the repo",
+    caption: "Personal updates and short-form clips beyond the case studies.",
     url: "https://www.instagram.com/ruuttarala/",
-    type: "Instagram",
-    caption: "Personal updates and short-form clips beyond the portfolio case studies.",
+    embedUrl: "PASTE_REEL_URL_HEREembed",
   },
 ];
 
