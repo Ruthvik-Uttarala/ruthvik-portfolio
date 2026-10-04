@@ -9,6 +9,7 @@ const signalGroups = [
     visualLabel: "Interface + workflow coverage",
     litSquares: 44,
     accent: "bg-[var(--lime)]",
+    offset: 2,
     rows: [
       {
         label: "Product workflows",
@@ -33,6 +34,7 @@ const signalGroups = [
     visualLabel: "Evidence delivery path",
     litSquares: 34,
     accent: "bg-[var(--cream)]",
+    offset: 7,
     rows: [
       {
         label: "Event scale",
@@ -56,7 +58,8 @@ const signalGroups = [
     label: "AI Workflows",
     visualLabel: "Model + agent outcomes",
     litSquares: 48,
-    accent: "bg-[var(--lavender)]",
+    accent: "bg-[var(--lime)]",
+    offset: 13,
     rows: [
       {
         label: "Guided task completion",
@@ -80,7 +83,8 @@ const signalGroups = [
     label: "Cloud Systems",
     visualLabel: "Reliability + infra signal",
     litSquares: 28,
-    accent: "bg-[var(--slate)]",
+    accent: "bg-[var(--cream)]",
+    offset: 19,
     rows: [
       {
         label: "Response speed",
@@ -149,11 +153,16 @@ export function WorkSignalBoard() {
           {active.litSquares}/56 active
         </p>
       </div>
-      <div className="mb-5 grid [grid-template-columns:repeat(28,minmax(0,1fr))] gap-1" aria-hidden="true">
+      <div key={active.id} className="mb-5 grid [grid-template-columns:repeat(28,minmax(0,1fr))] gap-1" aria-hidden="true">
         {Array.from({ length: 56 }).map((_, index) => (
           <span
             key={index}
-            className={`aspect-square transition-colors ${index < active.litSquares ? active.accent : "bg-[rgba(243,244,234,0.18)]"}`}
+            className={[
+              "aspect-square transition-colors duration-300",
+              index < active.litSquares && (index + active.offset) % 5 !== 0
+                ? active.accent
+                : "bg-[rgba(243,244,234,0.18)]",
+            ].join(" ")}
           />
         ))}
       </div>

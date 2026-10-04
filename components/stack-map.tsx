@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/section-heading";
 const panelClasses = [
   "dark-panel",
   "cream-panel",
-  "bg-[var(--lavender)] text-[#6f6389]",
+  "dark-panel",
   "dark-panel",
   "lime-panel",
   "cream-panel",
@@ -21,7 +21,7 @@ export function StackMap() {
         title="Tools mapped to role fit."
         subtitle="Grouped by the kind of production work they support: interfaces, services, infrastructure, data, AI workflows, and observability."
       />
-      <div className="grid gap-4 md:grid-cols-12">
+      <div className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
         {stackGroups.map((group, index) => (
           <motion.article
             key={group.name}
@@ -30,9 +30,8 @@ export function StackMap() {
             viewport={{ once: true, margin: "-8% 0px -10% 0px" }}
             transition={{ duration: 0.42, delay: index * 0.04 }}
             className={[
-              "evidence-card relative overflow-hidden p-5",
+              "evidence-card relative h-fit overflow-hidden p-5",
               panelClasses[index % panelClasses.length],
-              index === 1 || index === 4 ? "md:col-span-7" : "md:col-span-5",
             ].join(" ")}
           >
             <div className="absolute inset-x-0 top-0 h-12 scan-row opacity-20" />

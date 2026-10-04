@@ -52,7 +52,26 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.22} className="cream-panel p-5 md:col-span-4">
+        <Tile delay={0.22} className="dark-panel overflow-hidden md:col-span-4">
+          <div className="relative h-[360px]">
+            <Image
+              src="/media/personal/empire-state-profile.jpg"
+              alt="Ruthvik in New York with the Empire State Building"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover object-[50%_42%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(17,19,18,0.88)] via-transparent to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5">
+              <p className="mono-label text-[var(--lime)]">Location / identity</p>
+              <p className="mt-3 max-w-sm text-lg font-black leading-tight text-white">
+                Building from Penn State roots into production engineering work.
+              </p>
+            </div>
+          </div>
+        </Tile>
+
+        <Tile delay={0.28} className="cream-panel p-5 md:col-span-4">
           <div className="flex flex-col gap-4">
             <div className="flex items-start justify-between gap-3">
               <div>
@@ -79,7 +98,7 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.28} className="dark-panel p-5 md:col-span-4">
+        <Tile delay={0.34} className="dark-panel h-fit p-5 md:col-span-4">
           <p className="mono-label text-[var(--lime)]">Core stack</p>
           <div className="mt-4 grid gap-2">
             {[
@@ -99,7 +118,7 @@ export function Hero() {
           </p>
         </Tile>
 
-        <Tile delay={0.34} className="bg-[var(--lavender)] p-5 text-[#6f6389] md:col-span-4">
+        <Tile delay={0.4} className="cream-panel h-fit p-5 md:col-span-4">
           <p className="mono-label">At a glance</p>
           <div className="mt-4 grid gap-2 sm:grid-cols-2">
             {[
@@ -108,7 +127,7 @@ export function Hero() {
               ["AWS", "ML Engineer + AI Practitioner"],
               ["Links", "GitHub / LinkedIn / Instagram / Resume"],
             ].map(([label, value]) => (
-              <div key={label} className="border border-current/20 bg-white/20 px-3 py-3">
+              <div key={label} className="border border-[#c9cfc4] bg-white/30 px-3 py-3">
                 <p className="font-mono text-xs font-black uppercase">{label}</p>
                 <p className="mt-1 text-sm font-semibold leading-tight">{value}</p>
               </div>
@@ -116,7 +135,7 @@ export function Hero() {
           </div>
         </Tile>
 
-        <Tile delay={0.4} className="dark-panel p-5 md:col-span-8">
+        <Tile delay={0.46} className="dark-panel p-5 md:col-span-8">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="mono-label text-[var(--muted)]">Let&apos;s connect</p>

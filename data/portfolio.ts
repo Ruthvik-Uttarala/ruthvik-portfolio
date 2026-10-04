@@ -27,6 +27,14 @@ export type StackGroup = {
   tools: string[];
 };
 
+export type InstagramReel = {
+  id: string;
+  title: string;
+  caption: string;
+  url: string;
+  embedUrl: string;
+};
+
 export const profile = {
   name: "Ruthvik Uttarala",
   shortMark: "RU",
@@ -125,28 +133,15 @@ export const projects: Project[] = [
   },
 ];
 
-export const instagramReels = [
-  {
-    id: "reel-1",
-    title: "Recent motion",
-    caption: "Short updates and clips from what I am building.",
-    url: "https://www.instagram.com/ruuttarala/",
-    embedUrl: "PASTE_REEL_URL_HEREembed",
-  },
-  {
-    id: "reel-2",
-    title: "Build notes",
-    caption: "Projects, learning, launches, and behind-the-scenes work.",
-    url: "https://www.instagram.com/ruuttarala/",
-    embedUrl: "PASTE_REEL_URL_HEREembed",
-  },
-  {
-    id: "reel-3",
-    title: "Outside the repo",
-    caption: "Personal updates and short-form clips beyond the case studies.",
-    url: "https://www.instagram.com/ruuttarala/",
-    embedUrl: "PASTE_REEL_URL_HEREembed",
-  },
+export const instagramReels: InstagramReel[] = [
+  // Add exact reel URLs here later:
+  // {
+  //   id: "reel-1",
+  //   title: "Exact reel title",
+  //   caption: "Short caption",
+  //   url: "https://www.instagram.com/reel/EXACT_SHORTCODE/",
+  //   embedUrl: "https://www.instagram.com/reel/EXACT_SHORTCODE/embed/"
+  // }
 ];
 
 export const experiences: ExperienceItem[] = [

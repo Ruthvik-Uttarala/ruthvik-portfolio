@@ -1,12 +1,16 @@
 import { instagramReels, profile } from "@/data/portfolio";
 import { SectionHeading } from "@/components/section-heading";
 
-function hasRealEmbed(embedUrl: string) {
-  return Boolean(embedUrl) && !embedUrl.includes("PASTE_REEL_URL_HERE");
+function isExactReel(item: { url: string; embedUrl: string }) {
+  return (
+    item.url.includes("instagram.com/reel/") &&
+    item.embedUrl.includes("instagram.com/reel/") &&
+    item.embedUrl.endsWith("/embed/")
+  );
 }
 
 export function InstagramRail() {
-  if (!instagramReels.length) return null;
+  const realReels = instagramReels.filter(isExactReel);
 
   return (
     <section id="motion" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
@@ -26,10 +30,9 @@ export function InstagramRail() {
         </a>
       </div>
 
-      <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:thin]">
-        {instagramReels.map((item, index) => {
-          const realEmbed = hasRealEmbed(item.embedUrl);
-          return (
+      {realReels.length ? (
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:thin]">
+          {realReels.map((item) => (
             <article
               key={item.id}
               className="evidence-card dark-panel flex aspect-[9/16] w-[78vw] max-w-[340px] shrink-0 snap-start flex-col overflow-hidden p-3 sm:w-[310px]"
@@ -40,37 +43,19 @@ export function InstagramRail() {
               </div>
 
               <div className="relative my-3 flex-1 overflow-hidden border border-[var(--line)] bg-[rgba(239,241,229,0.05)]">
-                {realEmbed ? (
-                  <iframe
-                    title={`${item.title} Instagram reel`}
-                    src={item.embedUrl}
-                    className="h-full w-full"
-                    loading="lazy"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  />
-                ) : (
-                  <div className="flex h-full flex-col justify-between p-4">
-                    <div className="grid grid-cols-8 gap-1 text-[var(--lime)]" aria-hidden="true">
-                      {Array.from({ length: 88 }).map((_, dot) => (
-                        <span
-                          key={dot}
-                          className={`aspect-square ${dot < 42 + index * 10 ? "bg-current" : "bg-current/20"}`}
-                        />
-                      ))}
-                    </div>
-                    <div>
-                      <p className="mono-label text-[var(--lime)]">Preview</p>
-                      <h3 className="mt-3 text-3xl font-black leading-none tracking-tight">{item.title}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">{item.caption}</p>
-                    </div>
-                  </div>
-                )}
+                <iframe
+                  title={`${item.title} Instagram reel`}
+                  src={item.embedUrl}
+                  className="h-full w-full"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                />
               </div>
 
               <div className="px-2 pb-2">
                 <p className="text-sm leading-relaxed text-[var(--muted)]">{item.caption}</p>
                 <a
-                  href={item.url.includes("PASTE_REEL_URL_HERE") ? profile.instagram : item.url}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex border border-[var(--line)] px-3 py-2 font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--text)] transition hover:border-[var(--lime)] hover:bg-[var(--lime)] hover:text-[var(--panel)]"
@@ -79,27 +64,30 @@ export function InstagramRail() {
                 </a>
               </div>
             </article>
-          );
-        })}
-
+          ))}
+        </div>
+      ) : (
+        // To show actual reels, add exact public Reel URLs to instagramReels.
         <a
           href={profile.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="evidence-card lime-panel flex aspect-[9/16] w-[78vw] max-w-[340px] shrink-0 snap-start flex-col justify-between p-5 sm:w-[310px]"
+          className="evidence-card dark-panel grid gap-6 overflow-hidden p-5 sm:grid-cols-[1fr_auto] sm:items-end"
         >
           <div>
-            <p className="mono-label">Profile</p>
-            <h3 className="mt-8 text-4xl font-black leading-none tracking-tight">More on @ruuttarala</h3>
-            <p className="mt-4 text-sm font-semibold leading-relaxed">
-              More videos, project updates, and clips from the work around the work.
+            <p className="mono-label text-[var(--lime)]">Follow @ruuttarala</p>
+            <h3 className="mt-4 max-w-2xl text-4xl font-black leading-none tracking-tight">
+              Short videos, project updates, and clips from the work around the work.
+            </h3>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
+              Exact Reel embeds will appear here once public Reel URLs are added.
             </p>
           </div>
-          <span className="inline-flex w-fit border border-[rgba(15,90,76,0.35)] px-4 py-2.5 font-mono text-xs font-black uppercase tracking-[0.08em]">
+          <span className="inline-flex w-fit border border-[var(--lime)] bg-[var(--lime)] px-4 py-2.5 font-mono text-xs font-black uppercase tracking-[0.08em] text-[var(--panel)]">
             Open Instagram
           </span>
         </a>
-      </div>
+      )}
     </section>
   );
 }
