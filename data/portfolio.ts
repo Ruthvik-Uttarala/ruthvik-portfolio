@@ -1,5 +1,5 @@
 export type Project = {
-  id: "silvervisit" | "orbit" | "flowwick" | "novaarchitect";
+  id: "silvervisit" | "orbit" | "flowcart" | "novaarchitect";
   category: string;
   title: string;
   problem: string;
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     metrics: ["40+ workflows automated", "35% lower navigation-failure risk", "auditable UI actions"],
   },
   {
-    id: "flowwick",
+    id: "flowcart",
     category: "Agentic Commerce / Full Stack",
     title: "Flowwick",
     problem:
