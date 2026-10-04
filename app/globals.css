@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0e0d0b;
-  --text: #f2eee7;
-  --muted: #9c978f;
-  --accent: #c87842;
-  --accent-soft: rgba(224, 151, 92, 0.45);
-  --steel: #718aa3;
-  --line: rgba(242, 238, 231, 0.14);
-  --line-soft: rgba(242, 238, 231, 0.06);
-  --surface: rgba(27, 24, 20, 0.62);
-  --surface-elev: rgba(37, 32, 28, 0.64);
-  --surface-hover: rgba(54, 47, 40, 0.56);
-  --surface-transparent: rgba(11, 10, 8, 0.62);
+  --bg: #f7f7f5;
+  --text: #151515;
+  --muted: #5f6368;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.26);
+  --steel: #475569;
+  --line: rgba(15, 23, 42, 0.12);
+  --line-soft: rgba(15, 23, 42, 0.07);
+  --surface: rgba(255, 255, 255, 0.76);
+  --surface-elev: rgba(255, 255, 255, 0.92);
+  --surface-hover: rgba(241, 245, 249, 0.96);
+  --surface-transparent: rgba(255, 255, 255, 0.72);
 }
 
 @theme inline {
@@ -23,7 +23,10 @@
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 28%),
+    radial-gradient(circle at 90% 0%, rgba(15, 23, 42, 0.05), transparent 26%),
+    var(--bg);
   color: var(--text);
   font-family: var(--font-geist-sans), "Inter", ui-sans-serif, system-ui;
 }
@@ -33,7 +36,7 @@ html {
 }
 
 .grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px);
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 0.5px, transparent 0.5px);
   background-size: 2px 2px;
 }
 
@@ -44,8 +47,13 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  box-shadow: 0 0 0 2px rgba(224, 151, 92, 0.4);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.36);
   border-radius: 10px;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--text);
 }
 
 @media (prefers-reduced-motion: reduce) {

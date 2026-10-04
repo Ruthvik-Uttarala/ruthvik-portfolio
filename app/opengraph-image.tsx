@@ -17,19 +17,21 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0E0D0B",
-          color: "#F2EEE7",
+          background: "#F7F7F5",
+          color: "#151515",
           padding: "56px",
           fontFamily: "sans-serif",
-          border: "1px solid rgba(242,238,231,0.15)",
+          border: "1px solid rgba(15,23,42,0.12)",
         }}
       >
-        <div style={{ fontSize: 18, letterSpacing: "0.32em", color: "#9C978F" }}>RU / 26</div>
-        <div style={{ maxWidth: 930, display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 66, lineHeight: 1.06, fontWeight: 600 }}>I build AI products that survive real users.</div>
-          <div style={{ marginTop: 20, fontSize: 30, color: "#C87842" }}>Ruthvik Uttarala — Software Engineer</div>
+        <div style={{ fontSize: 18, letterSpacing: "0.28em", color: "#5F6368" }}>RU / SOFTWARE ENGINEER</div>
+        <div style={{ maxWidth: 960, display: "flex", flexDirection: "column" }}>
+          <div style={{ fontSize: 64, lineHeight: 1.06, fontWeight: 700 }}>
+            Full Stack, AI, and Cloud Systems
+          </div>
+          <div style={{ marginTop: 22, fontSize: 30, color: "#2563EB" }}>Ruthvik Uttarala — Penn State CS</div>
         </div>
-        <div style={{ fontSize: 22, color: "#9C978F" }}>AI / Cloud / Full Stack</div>
+        <div style={{ fontSize: 22, color: "#5F6368" }}>React / TypeScript / Python / AWS / APIs / AI Systems</div>
       </div>
     ),
     { ...size },

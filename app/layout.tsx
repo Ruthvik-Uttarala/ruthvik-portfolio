@@ -13,22 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ruthvik-portfolio-one.vercel.app"),
-  title: "Ruthvik Uttarala — Software Engineer | AI, Cloud & Full Stack",
+  metadataBase: new URL("https://ruthvik-portfolio-eight.vercel.app"),
+  title: "Ruthvik Uttarala — Software Engineer | Full Stack, AI & Cloud",
   description:
-    "Portfolio of Ruthvik Uttarala, a software engineer building AI products, cloud infrastructure, and full-stack systems.",
+    "Portfolio of Ruthvik Uttarala, a software engineer building full-stack applications, AI systems, REST APIs, and cloud platforms.",
   openGraph: {
-    title: "Ruthvik Uttarala — Software Engineer | AI, Cloud & Full Stack",
+    title: "Ruthvik Uttarala — Software Engineer | Full Stack, AI & Cloud",
     description:
-      "Portfolio of Ruthvik Uttarala, a software engineer building AI products, cloud infrastructure, and full-stack systems.",
+      "Portfolio of Ruthvik Uttarala, a software engineer building full-stack applications, AI systems, REST APIs, and cloud platforms.",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruthvik Uttarala — Software Engineer | AI, Cloud & Full Stack",
+    title: "Ruthvik Uttarala — Software Engineer | Full Stack, AI & Cloud",
     description:
-      "Portfolio of Ruthvik Uttarala, a software engineer building AI products, cloud infrastructure, and full-stack systems.",
+      "Portfolio of Ruthvik Uttarala, a software engineer building full-stack applications, AI systems, REST APIs, and cloud platforms.",
     images: ["/opengraph-image"],
   },
   icons: {

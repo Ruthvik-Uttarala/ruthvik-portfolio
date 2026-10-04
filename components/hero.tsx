@@ -22,7 +22,7 @@ export function Hero() {
           </motion.p>
 
           <h1 className="max-w-3xl text-4xl leading-[1.02] font-semibold tracking-tight text-[var(--text)] sm:text-5xl lg:text-6xl">
-            {["I build AI products", "that survive real users."].map((line, index) => (
+            {["Full Stack, AI,", "and Cloud Systems."].map((line, index) => (
               <motion.span
                 key={line}
                 initial={{ opacity: 0, y: reduce ? 0 : 18 }}
@@ -59,17 +59,20 @@ export function Hero() {
             transition={{ delay: 0.42, duration: 0.5 }}
             className="flex flex-wrap items-center gap-3"
           >
-            <MagneticButton href="#work" label="OPEN CASE">
-              View selected work
+            <MagneticButton href="#work" label="VIEW WORK">
+              Featured projects
             </MagneticButton>
-            <MagneticButton href={resumeHref} label="OPEN PDF">
-              Download résumé
+            <MagneticButton href={resumeHref} label="VIEW RESUME">
+              View résumé
             </MagneticButton>
-            <MagneticButton href={profile.github} external label="VIEW REPO">
+            <MagneticButton href={profile.github} external label="VIEW GITHUB">
               GitHub
             </MagneticButton>
-            <MagneticButton href={profile.linkedin} external>
+            <MagneticButton href={profile.linkedin} external label="VIEW LINKEDIN">
               LinkedIn
+            </MagneticButton>
+            <MagneticButton href={profile.email} label="EMAIL">
+              Email
             </MagneticButton>
           </motion.div>
         </div>

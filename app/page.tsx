@@ -1,5 +1,4 @@
 import { ContactSection } from "@/components/contact-section";
-import { CustomCursor } from "@/components/custom-cursor";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import { Hero } from "@/components/hero";
 import { Nav } from "@/components/nav";
@@ -11,11 +10,9 @@ import { credentials } from "@/data/portfolio";
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <CustomCursor />
       <Nav />
       <main>
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(200,120,66,0.07),transparent_34%),radial-gradient(circle_at_84%_4%,rgba(113,138,163,0.09),transparent_30%)]" />
-        <div className="pointer-events-none absolute inset-0 grain opacity-[0.28]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(88,119,176,0.08),transparent_34%),radial-gradient(circle_at_84%_4%,rgba(16,24,40,0.05),transparent_30%)]" />
         <Hero />
         <ProjectGrid />
         <ExperienceTimeline />
