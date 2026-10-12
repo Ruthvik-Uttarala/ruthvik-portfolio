@@ -18,8 +18,8 @@ export function ExperienceTimeline() {
     <section id="experience" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
       <SectionHeading
         eyebrow="Implementation record"
-        title="Production constraints, scale, and ownership."
-        subtitle="Operator dashboards, AI pipelines, API systems, cloud delivery, and reliability improvements."
+        title="Production engineering, applied research, and startup leadership."
+        subtitle="Reliable document and parking systems, evaluated RAG workflows, automated testing, and product execution."
       />
       <div ref={wrapperRef} className="relative mt-8">
         <div className="absolute top-2 bottom-2 left-3 w-px bg-[var(--line)]" />

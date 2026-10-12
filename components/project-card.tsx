@@ -119,7 +119,7 @@ function ProjectVisual({ project, reduce }: { project: Project; reduce: boolean 
       <div className="soft-border bg-[rgba(239,241,229,0.06)] p-4">
         <div className="mb-4 flex items-center justify-between">
           <p className="mono-label text-[var(--muted)]">Telehealth workflow</p>
-          <span className="font-mono text-[11px] font-black text-[var(--lime)]">40+ FLOWS</span>
+          <span className="font-mono text-[11px] font-black text-[var(--lime)]">GROUNDED ACTIONS</span>
         </div>
         <div className="grid gap-2 text-xs">
           {["Intent: book follow-up", "Guarded action: open appointment tab", "Confirmation: wait for next turn"].map((step, index) => (
@@ -134,44 +134,48 @@ function ProjectVisual({ project, reduce }: { project: Project; reduce: boolean 
   }
 
   if (project.id === "flowwick") {
+    const stages = ["Merchant onboarding", "Product management", "AI-assisted content", "Shopify / Instagram", "Status + errors"];
     return (
       <div className="soft-border cream-panel p-4">
         <div className="mb-4 flex items-center justify-between">
           <p className="mono-label text-[var(--green)]">Launch pipeline</p>
-          <span className="font-mono text-[11px] font-black text-[var(--green)]">&lt;90S/ITEM</span>
+          <span className="font-mono text-[11px] font-black text-[var(--green)]">2 CHANNELS</span>
         </div>
-        <div className="grid gap-2 text-xs font-bold uppercase text-[var(--panel)] sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-center">
-          <span className="border border-[#c9cfc4] px-3 py-3">Input</span>
-          <span className="hidden font-mono text-xl sm:block">→</span>
-          <span className="border border-[#c9cfc4] px-3 py-3">Shopify listing</span>
-          <span className="hidden font-mono text-xl sm:block">→</span>
-          <span className="border border-[#c9cfc4] px-3 py-3">Instagram post</span>
+        <div className="grid gap-2 text-xs font-bold uppercase text-[var(--panel)] sm:grid-cols-2 xl:grid-cols-5 xl:items-stretch">
+          {stages.map((stage, index) => (
+            <div key={stage} className="relative border border-[#c9cfc4] px-3 py-3">
+              <span className="font-mono text-[10px] text-[var(--green)]">0{index + 1}</span>
+              <p className="mt-2 leading-tight">{stage}</p>
+              {index < stages.length - 1 ? <span className="absolute -right-2.5 top-1/2 z-10 hidden -translate-y-1/2 bg-[var(--cream)] px-1 font-mono text-base xl:block">→</span> : null}
+            </div>
+          ))}
         </div>
       </div>
     );
   }
 
   if (project.id === "novaarchitect") {
+    const stages = ["AWS discovery", "Validated resource data", "Bedrock analysis", "Structured results"];
     return (
       <div className="soft-border bg-[rgba(239,241,229,0.06)] p-4">
-        <div className="mb-4 grid gap-2 text-[11px] sm:grid-cols-3">
-          {["Cost delta", "Risk score", "Uptime"].map((label) => (
-            <div key={label} className="border border-[var(--line)] px-2 py-2 font-mono text-[var(--muted)] uppercase">
-              {label}
-            </div>
-          ))}
+        <div className="mb-4 flex items-center justify-between">
+          <p className="mono-label text-[var(--muted)]">Defensive analysis pipeline</p>
+          <span className="font-mono text-[11px] font-black text-[var(--lime)]">VALIDATED</span>
         </div>
-        <div className="flex h-20 items-end gap-1.5">
-          {[22, 44, 54, 38, 28, 16].map((height, index) => (
-            <motion.span
-              key={`${height}-${index}`}
-              className="block w-full bg-[var(--lime)]"
-              style={{ height }}
-              initial={{ height: reduce ? height : 0 }}
-              whileInView={{ height }}
+        <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+          {stages.map((stage, index) => (
+            <motion.div
+              key={stage}
+              initial={{ opacity: reduce ? 1 : 0.35 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: index * 0.05 }}
-            />
+              transition={{ duration: 0.35, delay: index * 0.08 }}
+              className="relative border border-[var(--line)] px-3 py-3"
+            >
+              <span className="font-mono text-[10px] font-black text-[var(--lime)]">0{index + 1}</span>
+              <p className="mt-2 text-xs font-bold uppercase leading-tight text-[var(--text)]">{stage}</p>
+              {index < stages.length - 1 ? <span className="absolute -right-2.5 top-1/2 z-10 hidden -translate-y-1/2 bg-[var(--panel)] px-1 font-mono text-base text-[var(--lime)] xl:block">→</span> : null}
+            </motion.div>
           ))}
         </div>
       </div>
@@ -183,7 +187,7 @@ function ProjectVisual({ project, reduce }: { project: Project; reduce: boolean 
     <div className="soft-border bg-[rgba(239,241,229,0.06)] p-4">
       <div className="mb-4 flex items-center justify-between">
         <p className="mono-label text-[var(--muted)]">Deployment timeline</p>
-        <span className="font-mono text-[11px] font-black text-[var(--lime)]">50 RUNS</span>
+        <span className="font-mono text-[11px] font-black text-[var(--lime)]">VISIBLE STATE</span>
       </div>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {stages.map((stage, index) => (

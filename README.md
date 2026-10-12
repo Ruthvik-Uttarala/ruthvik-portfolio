@@ -1,54 +1,51 @@
 # Ruthvik Uttarala Portfolio
 
-Production-ready single-page software engineering portfolio built with Next.js, TypeScript, Tailwind CSS, and the App Router.
+Production portfolio for Ruthvik Uttarala, a software engineer focused on backend and REST API engineering, full-stack applications, AWS cloud infrastructure, asynchronous systems, and applied AI.
 
-## Focus
+The site preserves an editorial bento-grid design while organizing recruiter-facing evidence around current experience and the October 12, 2026 resume.
 
-- Full Stack Software Engineering
-- AI systems and agentic workflows
-- Cloud platforms and production APIs
-- Recruiter-friendly project and experience storytelling
+## Featured work
 
-## Tech Stack
+- **Flowwick** — authenticated commerce workflows, 33 API route files, Shopify and Instagram publishing, OAuth, and AI-assisted merchant-editable content.
+- **NovaArchitect** — AWS discovery, Bedrock analysis with validation and recovery, seven REST endpoints, and 41 automated test functions.
+- **OptimalHub** — PDFextract asynchronous processing and PARKSOL idempotent parking-event workflows.
+- **PlantVillage** — FastAPI services, RAG evaluation through LangSmith traces, and regression coverage across Python and TypeScript.
+
+## Tech stack
 
 - Next.js App Router
-- TypeScript
+- TypeScript and React
 - Tailwind CSS
 - Motion
 - Vercel
 
-## Local Setup
+## Local verification
+
+Install from the committed lockfile and run the same checks used before release:
 
 ```bash
-npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Production Build
-
-```bash
+npm ci
+npm run lint
+npx tsc --noEmit
 npm run build
-npm run start
 ```
 
-## Deploy to Vercel
-
-This repo is connected to Vercel. Pushes to `main` trigger a new deployment automatically.
+Run the production build locally with:
 
 ```bash
-git add .
-git commit -m "Update portfolio content"
-git push origin main
+npm run start
 ```
 
 ## Resume
 
-The resume button points to:
+`public/resume.pdf` is generated from the canonical October 12, 2026 DOCX without rewriting its content. The `/resume` route redirects to `/resume.pdf`, and download links use `Ruthvik_Uttarala_Resume.pdf` as the suggested filename.
+
+## Deployment
+
+The repository is connected to the existing Vercel project serving:
 
 ```txt
-/public/resume.pdf
+https://ruthvik-portfolio-uttarala-ruthvik.vercel.app
 ```
 
-Replace that file when a newer resume version is ready.
+Pushes to `main` trigger the production deployment workflow. Verify the linked Vercel account and project before any manual deployment because similarly named projects exist in more than one account.

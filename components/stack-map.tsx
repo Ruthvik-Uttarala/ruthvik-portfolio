@@ -18,8 +18,8 @@ export function StackMap() {
     <section id="stack" className="mx-auto w-full max-w-[1430px] px-4 py-20 sm:px-6">
       <SectionHeading
         eyebrow="Systems matrix"
-        title="Tools mapped to role fit."
-        subtitle="Grouped by the kind of production work they support: interfaces, services, infrastructure, data, AI workflows, and observability."
+        title="Skills mapped to the work they support."
+        subtitle="A scannable view of hands-on frontend, backend, data, cloud, applied AI, and reliability experience."
       />
       <div className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
         {stackGroups.map((group, index) => (

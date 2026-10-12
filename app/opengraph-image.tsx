@@ -27,11 +27,11 @@ export default function OpenGraphImage() {
         <div style={{ fontSize: 18, letterSpacing: "0.28em", color: "#5F6368" }}>RU / SOFTWARE ENGINEER</div>
         <div style={{ maxWidth: 960, display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 64, lineHeight: 1.06, fontWeight: 700 }}>
-            Full Stack, AI, and Cloud Systems
+            Reliable APIs, Cloud Systems, and Applied AI
           </div>
           <div style={{ marginTop: 22, fontSize: 30, color: "#2563EB" }}>Ruthvik Uttarala — Penn State CS</div>
         </div>
-        <div style={{ fontSize: 22, color: "#5F6368" }}>React / TypeScript / Python / AWS / APIs / AI Systems</div>
+        <div style={{ fontSize: 22, color: "#5F6368" }}>Python / TypeScript / REST APIs / AWS / Full Stack / Applied AI</div>
       </div>
     ),
     { ...size },
