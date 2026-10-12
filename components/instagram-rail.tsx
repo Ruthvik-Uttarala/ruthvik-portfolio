@@ -18,7 +18,7 @@ export function InstagramRail() {
         <SectionHeading
           eyebrow="Work in motion"
           title="Short updates beyond the repo."
-          subtitle="Short videos, updates, and behind-the-scenes clips from what I am building and where I am headed."
+          subtitle="A compact link to project notes, short videos, and behind-the-scenes updates."
         />
         <a
           href={profile.instagram}
@@ -67,7 +67,6 @@ export function InstagramRail() {
           ))}
         </div>
       ) : (
-        // To show actual reels, add exact public Reel URLs to instagramReels.
         <a
           href={profile.instagram}
           target="_blank"
@@ -77,10 +76,10 @@ export function InstagramRail() {
           <div>
             <p className="mono-label text-[var(--lime)]">Follow @ruuttarala</p>
             <h3 className="mt-4 max-w-2xl text-4xl font-black leading-none tracking-tight">
-              Short videos, project updates, and clips from the work around the work.
+              Project notes and the work around the work.
             </h3>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-              Exact Reel embeds will appear here once public Reel URLs are added.
+              Follow along for occasional build notes, short videos, and updates beyond the repository.
             </p>
           </div>
           <span className="inline-flex w-fit border border-[var(--lime)] bg-[var(--lime)] px-4 py-2.5 font-mono text-xs font-black uppercase tracking-[0.08em] text-[var(--panel)]">

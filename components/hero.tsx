@@ -44,7 +44,7 @@ export function Hero() {
           <div className="p-4">
             <p className="mono-label text-[var(--green)]">Profile</p>
             <p className="mt-3 text-sm leading-relaxed text-[#5f665d]">
-              Full-stack, backend/API, AI systems, and cloud/platform engineering.
+              Backend and REST API engineering, full-stack applications, AWS infrastructure, and applied AI.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[#5f665d]">
               Penn State CS. AWS ML + AI certified. OPT active, STEM OPT eligible through 2029.
@@ -65,7 +65,7 @@ export function Hero() {
             <div className="absolute inset-x-0 bottom-0 p-5">
               <p className="mono-label text-[var(--lime)]">Location / identity</p>
               <p className="mt-3 max-w-sm text-lg font-black leading-tight text-white">
-                Building from Penn State roots into production engineering work.
+              Penn State roots, startup leadership, applied research, and production software engineering.
               </p>
             </div>
           </div>
@@ -81,17 +81,17 @@ export function Hero() {
               <span className="border border-[var(--panel)] px-2 font-mono text-xl leading-none text-[var(--panel)]">×</span>
             </div>
             <p className="text-sm leading-relaxed text-[#5f665d]">
-              Software engineering roles across full-stack, backend/API, AI systems, and cloud/platform.
+              Production APIs, asynchronous processing, cloud infrastructure, and AI applications with measurable evaluation.
             </p>
             <p className="text-sm leading-relaxed text-[#5f665d]">
-              Best fit: teams shipping production APIs, AI workflows, operator dashboards, cloud reliability, or platform tooling.
+              Best fit: teams that value clear contracts, secure access, recoverable workflows, observability, and automated testing.
             </p>
             <div className="grid grid-cols-2 gap-4 font-mono text-xs font-bold uppercase leading-tight text-[var(--panel)]">
               <p>Scope:<br />Software engineering</p>
-              <p>Method:<br />Full stack + AI + cloud</p>
+              <p>Method:<br />Reliable systems + evidence</p>
             </div>
             <div className="grid gap-2 text-xs font-bold uppercase text-[var(--panel)] sm:grid-cols-2">
-              {["Production APIs", "Operator Dashboards", "AI Workflow Systems", "Cloud Reliability", "Measurable Outcomes"].map((signal) => (
+              {["Production APIs", "Asynchronous Systems", "Applied AI", "Authentication", "Automated Testing"].map((signal) => (
                 <span key={signal} className="border border-[#c9cfc4] px-3 py-2">{signal}</span>
               ))}
             </div>
@@ -103,9 +103,9 @@ export function Hero() {
           <div className="mt-4 grid gap-2">
             {[
               ["Frontend", "React, Next.js, TypeScript"],
-              ["Backend", "Python, Java, REST APIs"],
-              ["Cloud", "AWS, Docker, Kubernetes"],
-              ["Data", "PostgreSQL, Firebase, Supabase"],
+              ["Backend", "Python, Flask, FastAPI, Node.js"],
+              ["Cloud", "AWS, Lambda, S3, CloudWatch"],
+              ["Data", "PostgreSQL, DynamoDB, Firestore"],
             ].map(([label, value]) => (
               <div key={label} className="grid gap-2 border border-[var(--line)] bg-[rgba(239,241,229,0.06)] px-3 py-2 sm:grid-cols-[0.45fr_1fr]">
                 <p className="font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--lime)]">{label}</p>
@@ -114,7 +114,7 @@ export function Hero() {
             ))}
           </div>
           <p className="mt-4 text-sm leading-relaxed text-[var(--muted)]">
-            Preferred work: production systems, APIs, AI workflows, and cloud infrastructure with clear metrics.
+            Preferred work: production systems where reliability, security, and engineering evidence matter.
           </p>
         </Tile>
 

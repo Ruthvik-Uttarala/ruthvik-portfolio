@@ -8,15 +8,25 @@ export function ProjectGrid() {
       <SectionHeading
         eyebrow="Proof of work"
         title="Built under real constraints."
-        subtitle="AI, cloud, deployment, and workflow systems with measurable outcomes."
+        subtitle="Resume-aligned projects first, with implementation evidence and repositories for deeper inspection."
       />
-      <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-5">
-        {projects.map((project) => (
+      <div className="mb-12 grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-5">
+        {projects.slice(0, 2).map((project) => (
           <ProjectCard
             key={project.id}
             project={project}
           />
         ))}
+      </div>
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-3 border-t border-[var(--line)] pt-8">
+        <div>
+          <p className="mono-label text-[var(--lime)]">Selected earlier work</p>
+          <h3 className="mt-2 text-2xl font-black tracking-tight text-[var(--text)]">Additional systems and product work.</h3>
+        </div>
+        <p className="max-w-xl text-sm leading-relaxed text-[var(--muted)]">Supporting projects that extend the same focus on inspectable workflows, safe automation, and delivery.</p>
+      </div>
+      <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-5">
+        {projects.slice(2).map((project) => <ProjectCard key={project.id} project={project} />)}
       </div>
     </section>
   );

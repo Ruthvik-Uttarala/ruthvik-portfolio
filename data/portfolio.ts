@@ -38,13 +38,13 @@ export type InstagramReel = {
 export const profile = {
   name: "Ruthvik Uttarala",
   shortMark: "RU",
-  availability: "SOFTWARE ENGINEER / FULL STACK / AI / CLOUD",
+  availability: "SOFTWARE ENGINEER / BACKEND / FULL STACK / CLOUD / APPLIED AI",
   headline:
-    "I build production-ready full-stack, AI, and cloud systems that turn messy workflows into reliable software.",
+    "I build production software: reliable APIs, cloud infrastructure, and applied AI workflows.",
   subheadline:
-    "Software engineer focused on React, TypeScript, Python, REST APIs, AWS, AI systems, and operator-grade product workflows.",
+    "Software engineer working across Python, TypeScript, AWS, asynchronous systems, authentication, and automated testing.",
   identity:
-    "B.S. Computer Science - Penn State / F-1 OPT / STEM OPT eligible through 2029 / AWS ML + AI certified",
+    "B.S. Computer Science — Penn State, Dec 2025 / F-1 OPT / STEM OPT eligible through 2029",
   email: "mailto:uttaralaruthvik@gmail.com",
   github: "https://github.com/Ruthvik-Uttarala",
   linkedin: "https://www.linkedin.com/in/ruthvik-uttarala-09918a251/",
@@ -62,185 +62,151 @@ export const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
-export const heroMetrics = [
-  "500 flagged events/day",
-  "4,500 monthly image loads",
-  "<3s response SLA",
-  "90% task completion",
-  "30% modeled AWS savings",
-];
-
 export const projects: Project[] = [
+  {
+    id: "flowwick",
+    category: "AI-Powered E-commerce Product Launch Platform",
+    title: "Flowwick",
+    problem:
+      "Boutique sellers need one reliable workflow for product setup, AI-assisted copy, and publishing across commerce and social channels.",
+    buildResult:
+      "Built a Next.js, React, TypeScript, and Supabase commerce application with 33 API route files for authenticated product management, merchant onboarding, image uploads, and merchant-editable AI content. Integrated Shopify Admin GraphQL and Instagram Graph APIs with OAuth and channel-specific failure reporting.",
+    stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Shopify GraphQL", "Instagram Graph API", "OpenAI"],
+    repoUrl: "https://github.com/Ruthvik-Uttarala/Flowwick",
+    badge: "33 API routes",
+    metrics: ["33 API route files", "2 publishing channels", "OAuth integrations"],
+    proofNote:
+      "Shows end-to-end product engineering: authenticated workflows, third-party APIs, recoverable publishing errors, and AI output that merchants can review and edit.",
+  },
+  {
+    id: "novaarchitect",
+    category: "AWS Infrastructure Cost Optimization and Simulation Agent",
+    title: "NovaArchitect",
+    problem:
+      "Cloud analysis needs trustworthy resource evidence and defensive handling of AI output before teams can use it to evaluate infrastructure decisions.",
+    buildResult:
+      "Developed a Python and FastAPI discovery service spanning four AWS service families through boto3, with STS verification, pagination, and partial-failure reporting. Added a Bedrock Converse pipeline with Pydantic validation, JSON recovery, retries, and deterministic fallbacks.",
+    stack: ["Python", "FastAPI", "AWS", "boto3", "Amazon Bedrock", "Pydantic", "pytest"],
+    repoUrl: "https://github.com/Ruthvik-Uttarala/nova-architect",
+    badge: "41 test functions",
+    metrics: ["4 AWS service families", "7 REST endpoints", "41 tests / 13 modules"],
+    proofNote:
+      "Shows evidence-based cloud analysis, fault-tolerant API design, and a clear boundary between implemented discovery, validated analysis, and simulated action plans.",
+  },
   {
     id: "silvervisit",
     category: "Assistive AI / Telehealth",
     title: "SilverVisit AI",
     problem:
-      "Telehealth portals can create navigation friction for older adults when tasks require many steps, context switches, and unsupported page states.",
+      "Telehealth portals can create navigation friction for older adults when tasks require many steps and unsupported page states are not explained.",
     buildResult:
-      "Built a React and TypeScript Chrome MV3 assistant that converts typed or spoken telehealth goals into safe UI actions through Node.js REST APIs, Cloud Run, Vertex AI, Firestore traces, and guardrails across 40+ workflows.",
+      "Built a React and TypeScript Chrome MV3 assistant that turns typed or spoken goals into one grounded UI action at a time, backed by Node.js services, Cloud Run, Vertex AI, and Firestore traces.",
     stack: ["React", "TypeScript", "Node.js", "Chrome MV3", "Cloud Run", "Vertex AI", "Firestore"],
     repoUrl: "https://github.com/Ruthvik-Uttarala/silvervisit-ai",
-    badge: "90% task completion",
-    metrics: ["40+ workflows", "35% lower navigation failure risk", "guarded UI actions"],
+    badge: "Guarded actions",
+    metrics: ["Chrome MV3 extension", "One action per turn", "Cloud Run verification"],
     proofNote:
-      "Shows AI product judgment: guarded automation, accessibility-minded workflows, and measurable task completion.",
-  },
-  {
-    id: "flowwick",
-    category: "Agentic Commerce / Full Stack",
-    title: "Flowwick",
-    problem:
-      "Launching a product across Shopify and Instagram is still too manual when product copy, media, status tracking, and API publishing live in separate workflows.",
-    buildResult:
-      "Shipped a Next.js and Supabase product-launch workflow that turns structured product inputs into Shopify listings and Instagram publishing flows with typed AI outputs and real-time monitoring.",
-    stack: ["Next.js", "TypeScript", "Supabase", "Shopify API", "Instagram Graph API", "OpenAI", "Gemini"],
-    repoUrl: "https://github.com/Ruthvik-Uttarala/FlowCart",
-    badge: "<90s/item",
-    metrics: ["10m to <90s/item", "95% success across 25 batches", "input to publish pipeline"],
-    proofNote:
-      "Shows full-stack delivery: typed API orchestration, publishing workflows, and practical automation speedups.",
-  },
-  {
-    id: "novaarchitect",
-    category: "Cloud Infrastructure / AI Agent",
-    title: "NovaArchitect",
-    problem:
-      "Cloud architecture changes are risky when teams cannot quickly compare cost, uptime, and security tradeoffs before implementation.",
-    buildResult:
-      "Built a FastAPI and Next.js infrastructure simulation agent using Amazon Bedrock, Nova, REST APIs, and KPI cards to convert simulation outputs into actionable reports.",
-    stack: ["Next.js", "TypeScript", "Python", "FastAPI", "AWS", "Amazon Bedrock", "Nova"],
-    repoUrl: "https://github.com/Ruthvik-Uttarala/nova-architect",
-    badge: "30% savings",
-    metrics: ["5 simulations", "70% faster infrastructure decisions", "risk + cost reports"],
-    proofNote:
-      "Shows cloud/platform thinking: infrastructure tradeoffs made visible through cost, risk, and decision metrics.",
+      "Shows safety-minded AI product judgment through grounded actions, telehealth-only guardrails, and explicit unsupported-state handling.",
   },
   {
     id: "orbit",
     category: "Developer Infrastructure / Release Orchestration",
     title: "Orbit",
     problem:
-      "Deployment decisions slow down when pipeline state, authentication context, Vercel outcomes, and GitLab release history are scattered.",
+      "Release decisions become harder when pipeline state, authentication context, deployment outcomes, and history are scattered.",
     buildResult:
-      "Built a GitLab Duo-powered release orchestration dashboard with React, TypeScript, Node.js REST APIs, Supabase persistence, GitLab CI/CD integration, and 1s status polling.",
+      "Built a release orchestration dashboard that brings validation, deployment, verification, and reporting into one inspectable workflow.",
     stack: ["React", "TypeScript", "Node.js", "REST APIs", "GitLab CI/CD", "Vercel", "Supabase"],
-    repoUrl: "https://gitlab.com/gitlab-ai-hackathon-group1/gitlab-ai-hackathon-project.git",
-    badge: "50 deployment runs",
-    metrics: ["4-stage workflow", "60% faster release decisions", "1s status polling"],
+    repoUrl: "https://github.com/Ruthvik-Uttarala/Orbit",
+    badge: "4-stage workflow",
+    metrics: ["Validate", "Trigger", "Verify + report"],
     proofNote:
-      "Shows release ownership: deployment status, verification, and reporting brought into one reliable workflow.",
+      "Shows release ownership by making deployment state and verification steps visible in one workflow.",
   },
 ];
 
-export const instagramReels: InstagramReel[] = [
-  // Add exact reel URLs here later:
-  // {
-  //   id: "reel-1",
-  //   title: "Exact reel title",
-  //   caption: "Short caption",
-  //   url: "https://www.instagram.com/reel/EXACT_SHORTCODE/",
-  //   embedUrl: "https://www.instagram.com/reel/EXACT_SHORTCODE/embed/"
-  // }
-];
+export const instagramReels: InstagramReel[] = [];
 
 export const experiences: ExperienceItem[] = [
   {
     company: "OptimalHub LLC",
-    role: "Software Engineer, AI & Cloud Architecture",
-    dates: "Feb 2026 - Present",
-    context: "Implementation record for operator review systems, evidence delivery, and cloud reliability.",
+    role: "Software Engineer",
+    dates: "Feb 2026 — Present",
+    context: "Two production systems: PDFextract for asynchronous document processing and PARKSOL for parking operations.",
     outcomes: [
-      "Built an end-to-end RESTful API and React operator dashboard on AWS integrating real-time camera event streams with a TypeScript backend and PostgreSQL data layer to support 500 flagged vehicle events per day, reducing manual intervention time by 40%.",
-      "Shipped secure evidence delivery using React, Python REST APIs, and AWS S3 signed URLs, serving 4,500 monthly image loads, reducing modeled storage needs by 95%, and cutting evidence retrieval API errors by 30%.",
-      "Improved operator response SLA from 5s to under 3s by containerizing Docker and Kubernetes services, adding RabbitMQ job queues, gRPC worker calls, and 8 CloudWatch alarms that cut alert noise by 25%.",
+      "PDFextract — Rearchitected PDF processing into asynchronous Python and Flask services on AWS Lambda, using Amazon S3 and Aiven Kafka to decouple extraction workloads from API requests and support retryable jobs.",
+      "PARKSOL — Prevented duplicate parking violations by implementing idempotent TypeScript processing, time-window deduplication, and Firestore transaction locks in Firebase Cloud Functions.",
+      "PDFextract — Automated extraction and export to Excel, Word, JSON, and text using Gemini, PyMuPDF, pdfplumber, and structured-output validation.",
+      "Security — Added server-side role-based access controls with Firebase Authentication and Firestore for PARKSOL, and DynamoDB-backed authentication and authorization for PDFextract.",
+      "PARKSOL — Delivered a React operations dashboard through five successful Vercel production deployments for authenticated vehicle events, violations, and operator notifications.",
+      "PDFextract — Resolved Kafka ACL and SCRAM failures, Lambda packaging issues, and retry-state conflicts; validated the release against 123 passing backend tests.",
     ],
-    technologies: ["React", "TypeScript", "Python", "REST APIs", "PostgreSQL", "AWS S3", "Docker", "Kubernetes", "RabbitMQ", "gRPC", "CloudWatch"],
+    technologies: ["Python", "Flask", "TypeScript", "Node.js", "React", "REST APIs", "AWS Lambda", "Amazon S3", "DynamoDB", "Kafka", "Firebase", "Firestore", "Docker", "CloudWatch"],
   },
   {
     company: "PlantVillage",
-    role: "Researcher, Full Stack AI Systems",
-    dates: "Jun 2025 - Aug 2025",
-    context: "Implementation record for mobile computer vision, image submission pipelines, and field sync.",
+    role: "Researcher",
+    dates: "Jun 2025 — Aug 2025",
+    context: "Applied AI research paired with backend development, observability, and regression testing for agricultural advisory workflows.",
     outcomes: [
-      "Built and shipped a Python Flask REST API processing 8,000 image submissions with PostgreSQL, AWS S3, CI/CD, and a React Native mobile client with 83% end-to-end classification accuracy.",
-      "Improved minority class API response accuracy by 25%, F1 from 0.68 to 0.85.",
-      "Reduced AWS S3 upload failure rates by 60% with retry logic, exponential backoff, and multipart upload support.",
-      "Cut API-to-UI data latency by 87%, from 15s to 2s, using Firebase Realtime Database sync and SQLite offline caching.",
+      "Developed eight versioned FastAPI endpoints with PostgreSQL conversation persistence, S3 image storage, and a Vue 3 frontend for agricultural advisory and image analysis workflows.",
+      "Evaluated a LangChain, LangGraph, and ChromaDB RAG pipeline using 24 agricultural prompts and 179 LangSmith-traced executions to investigate latency and retrieval behavior.",
+      "Expanded regression coverage to more than 150 Python and TypeScript tests across APIs, PostgreSQL sessions, authentication, image uploads, and conversational workflows.",
     ],
-    technologies: ["Python", "Flask", "React Native", "PostgreSQL", "AWS S3", "CI/CD", "Firebase", "SQLite"],
+    technologies: ["Python", "FastAPI", "REST APIs", "TypeScript", "Vue 3", "PostgreSQL", "Amazon S3", "LangChain", "LangGraph", "ChromaDB", "LangSmith", "Promptfoo", "Docker"],
   },
   {
     company: "Happy Valley LaunchBox",
-    role: "Full Stack Developer",
-    dates: "Sep 2023 - Mar 2024",
-    context: "Implementation record for customer-facing web apps, API performance, payments, and release automation.",
+    role: "Startup Founder and Accelerator Participant",
+    dates: "May 2023 — Jun 2025",
+    context: "Startup leadership spanning entrepreneurship, customer discovery, product strategy, creator partnerships, and team execution.",
     outcomes: [
-      "Built two customer-facing web apps with React, TypeScript, and Python Flask REST APIs, serving 100+ daily active users while raising Lighthouse mobile performance from 50 to 70 and meeting WCAG AA checks.",
-      "Cut REST API latency 32%, from 1.9s to 1.3s, by optimizing Java Spring Boot and Python service paths, PostgreSQL composite indexes, and backend middleware.",
-      "Scaled throughput to 100+ concurrent users during 15-minute bursts using RabbitMQ, Redis caching, and AWS ECS containers.",
-      "Reduced inventory mismatches 70% and cut release time from 3 hours to under 20 minutes using Stripe webhooks, GraphQL inventory queries, Terraform, and GitHub Actions CI/CD.",
+      "Selected for Penn State's FastTrack Accelerator, with a 25% acceptance rate, and used accelerator mentorship to advance Ramaniyam's business strategy.",
+      "Directed seven creator partnerships producing more than 25 promotional posts, contributing to a reported 40% engagement increase and 15% weekly sales growth for Ramaniyam.",
+      "Led a three-member founding team developing and pitching MentorYou.ai through Idea TestLab, translating student feedback into product strategy.",
     ],
-    technologies: ["React", "TypeScript", "Python", "Flask", "Java", "Spring Boot", "PostgreSQL", "RabbitMQ", "Redis", "AWS ECS", "Terraform", "GitHub Actions"],
-  },
-];
-
-export const principles = [
-  {
-    id: "01",
-    title: "Make systems visible",
-    copy: "Interfaces should expose state, failure, progress, and ownership without asking users to guess.",
-  },
-  {
-    id: "02",
-    title: "Measure what improves",
-    copy: "Latency, reliability, accuracy, cost, and operator time are treated as product evidence.",
-  },
-  {
-    id: "03",
-    title: "Ship with guardrails",
-    copy: "AI actions need constraints, logs, recovery paths, and human-readable review trails.",
+    technologies: ["Entrepreneurship", "Product strategy", "Customer discovery", "Creator partnerships", "Team leadership"],
   },
 ];
 
 export const stackGroups: StackGroup[] = [
   {
     name: "Frontend",
-    description: "Interfaces and dashboards for operators, customers, and mobile users.",
-    tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native", "Angular", "Vue.js"],
+    description: "Accessible product interfaces, operational dashboards, and full-stack application surfaces.",
+    tools: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "Vue 3"],
   },
   {
-    name: "Backend/API",
-    description: "Services, workers, integrations, and typed APIs behind production workflows.",
-    tools: ["Python", "Java", "Node.js", "Flask", "FastAPI", "Spring", "REST APIs", "GraphQL", "gRPC", "microservices"],
+    name: "Backend / APIs",
+    description: "Services, integrations, and dependable API contracts behind production workflows.",
+    tools: ["Python", "Flask", "FastAPI", "Node.js", "REST APIs", "GraphQL", "Django", "Java"],
   },
   {
-    name: "Cloud/Platform",
-    description: "Deployments, reliability, storage, compute, and cloud operating constraints.",
-    tools: ["AWS", "Azure", "Google Cloud", "S3", "Lambda", "ECS", "CloudWatch", "Cloud Run"],
+    name: "Data",
+    description: "Relational, document, cache, authentication, and application data paths.",
+    tools: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Firebase", "Firestore", "Redis", "Supabase"],
   },
   {
-    name: "Databases",
-    description: "Relational, document, realtime, cache, and offline data paths.",
-    tools: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Supabase", "Redis", "DynamoDB", "SQLite"],
+    name: "Cloud / DevOps",
+    description: "Cloud compute, storage, messaging, containers, monitoring, and release operations.",
+    tools: ["AWS", "Google Cloud", "Lambda", "S3", "ECS", "CloudWatch", "Docker", "Linux", "Git", "Kafka", "RabbitMQ"],
   },
   {
-    name: "AI/ML",
-    description: "LLM, agentic, RAG, and computer vision workflows with measurable outputs.",
-    tools: ["LLMs", "OpenAI", "Gemini", "Vertex AI", "Amazon Bedrock", "Nova", "Computer Vision", "RAG"],
+    name: "Applied AI",
+    description: "LLM and RAG workflows with validation, tracing, retrieval evaluation, and fallbacks.",
+    tools: ["LLMs", "PyTorch", "LangChain", "LangGraph", "ChromaDB", "LangSmith", "Gemini", "OpenAI", "Amazon Bedrock"],
   },
   {
-    name: "DevOps/Observability",
-    description: "CI/CD, containers, queues, monitoring, and production feedback loops.",
-    tools: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins", "CI/CD", "Linux", "Kafka", "RabbitMQ", "Datadog", "Splunk"],
+    name: "Testing / Reliability",
+    description: "Practices that make systems secure, observable, repeatable, and resilient to retries.",
+    tools: ["pytest", "Automated regression testing", "Authentication", "Authorization", "Asynchronous processing", "Observability"],
   },
 ];
 
 export const credentials = [
-  "B.S. Computer Science - Penn State, Dec 2025",
+  "B.S. Computer Science — Penn State, Dec 2025",
   "F-1 OPT / STEM OPT eligible through 2029",
-  "AWS Certified Machine Learning Engineer - Associate",
+  "AWS Certified Machine Learning Engineer",
   "AWS Certified AI Practitioner",
-  "Product Innovation Entrepreneurship",
-  "President Walker Award",
+  "Product Innovation Entrepreneurship Certificate",
+  "President Walker Award — Penn State academic distinction",
 ];

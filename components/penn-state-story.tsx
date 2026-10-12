@@ -7,7 +7,7 @@ export function PennStateStory() {
       <SectionHeading
         eyebrow="Penn State to production"
         title="Where the systems mindset started."
-        subtitle="Penn State CS, product innovation, and hands-on build work shaped how I approach reliable software."
+        subtitle="Computer science led into entrepreneurship, applied AI research, and production software engineering."
       />
 
       <div className="grid items-start gap-4 md:grid-cols-12">
@@ -23,7 +23,7 @@ export function PennStateStory() {
           <div className="absolute inset-x-0 bottom-0 p-6">
             <p className="mono-label text-[var(--lime)]">High pressure / clear execution</p>
             <h3 className="mt-3 max-w-2xl text-4xl font-black leading-none tracking-tight text-white">
-              Penn State CS shaped how I approach systems: high pressure, high reliability, and clear execution.
+              Penn State CS built the foundation for product thinking, applied research, and reliable production systems.
             </h3>
           </div>
         </article>
@@ -42,7 +42,7 @@ export function PennStateStory() {
             <p className="mono-label text-[var(--green)]">Campus identity</p>
             <h3 className="mt-3 text-3xl font-black tracking-tight">Computer Science into shipped systems.</h3>
             <p className="mt-3 text-sm leading-relaxed text-[#5f665d]">
-              Computer Science, product innovation, and hands-on build work turned into full-stack, AI, and cloud systems.
+              A B.S. in Computer Science and Product Innovation Entrepreneurship certificate connected technical depth with customer and product thinking.
             </p>
           </div>
         </article>
@@ -59,7 +59,7 @@ export function PennStateStory() {
           </div>
           <div className="p-5 pt-0">
             <p className="mono-label text-[var(--lime)]">Credential signal</p>
-            <h3 className="mt-3 text-3xl font-black tracking-tight">Recognition backed by execution.</h3>
+            <h3 className="mt-3 text-3xl font-black tracking-tight">President Walker Award, a Penn State academic distinction.</h3>
           </div>
         </article>
 
@@ -74,7 +74,7 @@ export function PennStateStory() {
             />
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
-            {["B.S. Computer Science, Dec 2025", "AWS ML Engineer + AWS AI Practitioner", "President Walker Award"].map((item) => (
+            {["B.S. Computer Science, Dec 2025", "AWS ML Engineer + AI Practitioner", "Product Innovation Entrepreneurship"].map((item) => (
               <p
                 key={item}
                 className="border border-[var(--line)] bg-[rgba(239,241,229,0.06)] px-3 py-3 font-mono text-xs font-bold uppercase leading-tight text-[var(--text)]"

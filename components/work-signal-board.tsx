@@ -7,99 +7,99 @@ const signalGroups = [
     id: "full-stack",
     label: "Full Stack",
     visualLabel: "Interface + workflow coverage",
-    litSquares: 44,
+    litSquares: 38,
     accent: "bg-[var(--lime)]",
     offset: 2,
     rows: [
       {
-        label: "Product workflows",
-        metric: "100+ daily active users",
-        why: "React + TypeScript apps serving real customer workflows.",
+        label: "Flowwick API surface",
+        metric: "33 API route files",
+        why: "Authenticated product management, onboarding, and uploads.",
       },
       {
-        label: "API performance",
-        metric: "32% latency reduction",
-        why: "Backend tuning translated directly into faster product UX.",
+        label: "Publishing workflow",
+        metric: "2 channels",
+        why: "Shopify and Instagram integrations with channel-level errors.",
       },
       {
-        label: "Release execution",
-        metric: "3h -> <20m",
-        why: "CI/CD and infrastructure work cut shipping time dramatically.",
+        label: "PARKSOL delivery",
+        metric: "5 production deploys",
+        why: "A React operations dashboard delivered through Vercel.",
       },
     ],
   },
   {
     id: "backend",
-    label: "APIs",
-    visualLabel: "Evidence delivery path",
+    label: "Backend / APIs",
+    visualLabel: "Service + API evidence",
     litSquares: 34,
     accent: "bg-[var(--cream)]",
     offset: 7,
     rows: [
       {
-        label: "Event scale",
-        metric: "500 flagged events/day",
-        why: "REST APIs and PostgreSQL-backed services for operator review.",
+        label: "PlantVillage",
+        metric: "8 versioned endpoints",
+        why: "FastAPI services with PostgreSQL sessions and S3 images.",
       },
       {
-        label: "Evidence delivery",
-        metric: "4,500 image loads/month",
-        why: "S3 signed URL flow for secure production evidence retrieval.",
+        label: "NovaArchitect",
+        metric: "7 REST endpoints",
+        why: "Contracts cover discovery, analysis, reporting, and policies.",
       },
       {
-        label: "API reliability",
-        metric: "30% fewer retrieval errors",
-        why: "Cleaner review path for operators and downstream workflows.",
+        label: "PARKSOL events",
+        metric: "Idempotent processing",
+        why: "Time-window deduplication and Firestore transaction locks.",
       },
     ],
   },
   {
     id: "ai",
-    label: "AI Workflows",
-    visualLabel: "Model + agent outcomes",
-    litSquares: 48,
+    label: "AI Systems",
+    visualLabel: "Evaluation + structured output",
+    litSquares: 42,
     accent: "bg-[var(--lime)]",
     offset: 13,
     rows: [
       {
-        label: "Guided task completion",
-        metric: "90% SilverVisit completion",
-        why: "Guarded AI actions make user workflows safer and measurable.",
+        label: "RAG evaluation",
+        metric: "24 test prompts",
+        why: "Agricultural prompts exercised retrieval and response behavior.",
       },
       {
-        label: "Vision pipeline",
-        metric: "8,000 image submissions",
-        why: "Computer vision API shipped into a mobile field workflow.",
+        label: "LangSmith tracing",
+        metric: "179 executions",
+        why: "Traces exposed latency and retrieval behavior for investigation.",
       },
       {
-        label: "Model quality",
-        metric: "F1 0.68 -> 0.85",
-        why: "Minority-class performance improved where accuracy mattered.",
+        label: "PDFextract outputs",
+        metric: "4 export formats",
+        why: "Validated AI output becomes Excel, Word, JSON, or text.",
       },
     ],
   },
   {
     id: "cloud",
-    label: "Cloud Systems",
+    label: "Cloud / Platform",
     visualLabel: "Reliability + infra signal",
     litSquares: 28,
     accent: "bg-[var(--cream)]",
     offset: 19,
     rows: [
       {
-        label: "Response speed",
-        metric: "5s -> <3s SLA",
-        why: "Faster operator decisions through queues, workers, and alerts.",
+        label: "AWS discovery",
+        metric: "4 service families",
+        why: "STS verification, paginated retrieval, and partial failures.",
       },
       {
-        label: "Observability",
-        metric: "8 CloudWatch alarms",
-        why: "25% less alert noise while preserving production signal.",
+        label: "PDFextract regression",
+        metric: "123 backend tests",
+        why: "Release fixes verified across auth, packaging, Kafka, and retries.",
       },
       {
-        label: "Platform savings",
-        metric: "30% modeled AWS savings",
-        why: "Infrastructure decisions tied to cost and reliability outcomes.",
+        label: "NovaArchitect regression",
+        metric: "41 test functions",
+        why: "Thirteen pytest modules cover failure and recovery paths.",
       },
     ],
   },
@@ -118,7 +118,7 @@ export function WorkSignalBoard() {
             What I&apos;ve shipped
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-            Real systems, real metrics, production constraints.
+            Resume-backed signals tied to the system where each was delivered.
           </p>
         </div>
         <span className="grid size-10 shrink-0 place-items-center border border-[var(--cream)] font-mono text-xl leading-none">▣</span>
@@ -132,6 +132,8 @@ export function WorkSignalBoard() {
               key={group.id}
               type="button"
               role="tab"
+              id={`signal-tab-${group.id}`}
+              aria-controls={`signal-panel-${group.id}`}
               aria-selected={activeTab}
               onClick={() => setActiveId(group.id)}
               className={[
@@ -150,7 +152,7 @@ export function WorkSignalBoard() {
       <div className="mb-2 flex items-center justify-between gap-3">
         <p className="mono-label text-[var(--muted)]">{active.visualLabel}</p>
         <p className="font-mono text-[10px] font-black uppercase tracking-[0.08em] text-[var(--lime)]">
-          {active.litSquares}/56 active
+          Visual activity map
         </p>
       </div>
       <div key={active.id} className="mb-5 grid [grid-template-columns:repeat(28,minmax(0,1fr))] gap-1" aria-hidden="true">
@@ -167,7 +169,12 @@ export function WorkSignalBoard() {
         ))}
       </div>
 
-      <div className="grid gap-2" role="tabpanel">
+      <div
+        id={`signal-panel-${active.id}`}
+        className="grid gap-2"
+        role="tabpanel"
+        aria-labelledby={`signal-tab-${active.id}`}
+      >
         {active.rows.map((row) => (
           <article key={row.label} className="grid gap-2 border border-[var(--line)] bg-[rgba(239,241,229,0.06)] p-3 sm:grid-cols-[0.8fr_0.8fr_1.2fr] sm:items-center">
             <p className="mono-label text-[var(--muted)]">{row.label}</p>

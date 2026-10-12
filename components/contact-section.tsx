@@ -8,10 +8,10 @@ export function ContactSection() {
         <div className="evidence-card dark-panel p-6 sm:p-8">
           <p className="mono-label text-[var(--lime)]">Contact / availability</p>
           <h2 className="mt-5 max-w-3xl text-4xl font-black tracking-tight sm:text-6xl">
-            Have a role where production software, AI workflows, and cloud systems matter?
+            Building a team around reliable APIs, cloud systems, or applied AI?
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--muted)]">
-            I&apos;m open to software engineering roles across full-stack, backend/API, AI systems, cloud, and platform engineering. I also share short videos and updates on Instagram.
+            I&apos;m open to software engineering roles across backend, full-stack, cloud, and applied AI. My work centers on secure access, asynchronous processing, observable failures, and automated testing.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <MagneticButton href={profile.email}>Email Ruthvik</MagneticButton>

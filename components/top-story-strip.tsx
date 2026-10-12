@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const chips = ["B.S. CS", "AWS ML + AI", "President Walker Award", "OPT + STEM OPT eligible"];
+const chips = ["B.S. CS · Dec 2025", "AWS ML + AI", "President Walker Award", "STEM OPT eligible through 2029"];
 
 export function TopStoryStrip() {
   return (
@@ -20,7 +20,7 @@ export function TopStoryStrip() {
             <div>
               <p className="mono-label text-[var(--lime)]">Penn State to production</p>
               <h2 className="mt-4 max-w-2xl text-4xl font-black leading-none tracking-tight sm:text-5xl">
-                Penn State CS gave me the foundation. Production systems gave me the proof.
+                Penn State → entrepreneurship → research → production software.
               </h2>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -49,7 +49,7 @@ export function TopStoryStrip() {
           <div className="p-5">
             <p className="mono-label text-[var(--green)]">Identity</p>
             <p className="mt-3 text-sm font-semibold leading-relaxed text-[#5f665d]">
-              Campus story, engineering discipline, and production software work in one throughline.
+              A personal path from product experiments and applied AI research to reliable APIs and cloud systems.
             </p>
           </div>
         </article>
