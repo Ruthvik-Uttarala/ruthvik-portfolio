@@ -1,79 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Newsreader, Silkscreen } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const serif = Newsreader({ variable: "--font-serif", subsets: ["latin"], display: "swap" });
+const pixel = Silkscreen({ variable: "--font-pixel", subsets: ["latin"], weight: ["400", "700"], display: "swap" });
+const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"], display: "swap" });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = { metadataBase: new URL("https://ruthvikuttarala.com"), title: { default: "Ruthvik Uttarala — Software Engineer", template: "%s · Ruthvik Uttarala" }, description: "A personal portfolio about building reliable APIs, cloud infrastructure, full-stack products, and applied AI systems.", alternates: { canonical: "/" }, openGraph: { title: "Hi, I’m Ruthvik.", description: "Software engineer building dependable systems with Python, TypeScript, AWS, and applied AI.", url: "/", type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630 }] }, twitter: { card: "summary_large_image", images: ["/opengraph-image"] } };
+const person = { "@context": "https://schema.org", "@type": "Person", name: "Ruthvik Uttarala", url: "https://ruthvikuttarala.com", jobTitle: "Software Engineer", alumniOf: { "@type": "CollegeOrUniversity", name: "Pennsylvania State University" }, sameAs: ["https://github.com/Ruthvik-Uttarala", "https://www.linkedin.com/in/ruthvik-uttarala-09918a251/", "https://www.instagram.com/ruuttarala/"] };
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://ruthvikuttarala.com"),
-  title: "Ruthvik Uttarala — Software Engineer | Backend, AWS & Applied AI",
-  description: "Software engineering portfolio of Ruthvik Uttarala: reliable REST APIs, full-stack applications, AWS cloud infrastructure, asynchronous systems, and applied AI.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Ruthvik Uttarala — Software Engineer",
-    description: "Backend and full-stack engineering, AWS cloud infrastructure, reliable APIs, and applied AI systems.",
-    type: "website",
-    url: "/",
-    siteName: "Ruthvik Uttarala Portfolio",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ruthvik Uttarala — Software Engineer",
-    description: "Reliable APIs, full-stack applications, AWS infrastructure, and applied AI.",
-    images: ["/opengraph-image"],
-  },
-  icons: {
-    icon: "/icon.svg",
-  },
-};
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Ruthvik Uttarala",
-  url: "https://ruthvikuttarala.com",
-  email: "mailto:uttaralaruthvik@gmail.com",
-  jobTitle: "Software Engineer",
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: "Pennsylvania State University",
-  },
-  sameAs: [
-    "https://github.com/Ruthvik-Uttarala",
-    "https://www.linkedin.com/in/ruthvik-uttarala-09918a251/",
-  ],
-  knowsAbout: ["REST APIs", "Full-stack development", "AWS", "Asynchronous processing", "Applied AI", "Automated testing"],
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body className="min-h-full overflow-x-hidden bg-[var(--bg)] text-[var(--text)]">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        {children}
-      </body>
-    </html>
-  );
-}
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" className={`${serif.variable} ${pixel.variable} ${mono.variable}`}><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />{children}</body></html>; }
