@@ -23,7 +23,7 @@ export default function Home() {
     <main>
       <section className="cover" id="top">
         <div className="cover-copy">
-          <p className="pixel-label hero-reveal">PLAYER 01 · RUTHVIK UTTARALA</p>
+          <p className="pixel-label hero-reveal">HI, I'M RUTHVIK</p>
           <h1 className="hero-reveal delay-one">Ruthvik Uttarala</h1>
           <p className="role hero-reveal delay-two">Software Engineer</p>
           <p className="lede hero-reveal delay-two">I build dependable backend systems, full-stack products, cloud infrastructure, and applied AI workflows.</p>
