@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ruthvik-portfolio-uttarala-ruthvik.vercel.app"),
+  metadataBase: new URL("https://ruthvikuttarala.com"),
   title: "Ruthvik Uttarala — Software Engineer | Backend, AWS & Applied AI",
   description: "Software engineering portfolio of Ruthvik Uttarala: reliable REST APIs, full-stack applications, AWS cloud infrastructure, asynchronous systems, and applied AI.",
   alternates: {
@@ -42,7 +42,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Ruthvik Uttarala",
-  url: "https://ruthvik-portfolio-uttarala-ruthvik.vercel.app",
+  url: "https://ruthvikuttarala.com",
   email: "mailto:uttaralaruthvik@gmail.com",
   jobTitle: "Software Engineer",
   alumniOf: {
