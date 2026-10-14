@@ -23,7 +23,7 @@ export function MovieCounter() {
 
   return <aside className="movie-counter" aria-live="polite">
     <p className="pixel-label">DAYS SINCE MY LAST MOVIE</p>
-    <strong>{days ?? "—"}</strong>
+    <strong>{days ?? "…"}</strong>
     <p>The movie that inspired me to build things was also part of the medium I eventually decided to take a break from.</p>
     <details><summary>Why I stopped.</summary><p>On August 25, 2026, while my parents were visiting me near Cincinnati, they encouraged me to put more time into my goals. I made a personal commitment to step away from movies and television. It is not a judgment about anyone else; I simply feel clearer, and I now direct that restless energy toward meaningful work.</p></details>
     <time dateTime={MOVIE_FREE_SINCE}>Since August 25, 2026</time>
