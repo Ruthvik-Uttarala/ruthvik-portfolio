@@ -1,5 +1,16 @@
 export const profile={email:"mailto:uttaralaruthvik@gmail.com",github:"https://github.com/Ruthvik-Uttarala",linkedin:"https://www.linkedin.com/in/ruthvik-uttarala-09918a251/",instagram:"https://www.instagram.com/ruuttarala/"};
-export const chapters=[{id:"story",label:"01 Story"},{id:"journey",label:"02 Journey"},{id:"work",label:"03 Work"},{id:"lessons",label:"04 Lessons"},{id:"life",label:"05 Life"},{id:"next",label:"06 Next"},{id:"contact",label:"Contact"}];
-export const milestones=[{year:"2023",title:"Startup lessons",text:"At Happy Valley LaunchBox, I learned customer discovery, product strategy, and what it means to make an idea answer to real people."},{year:"2025",title:"Research into systems",text:"At PlantVillage, agricultural AI became backend engineering too: versioned APIs, PostgreSQL conversations, S3 images, evaluation traces, and regression tests."},{year:"DEC 2025",title:"Penn State",text:"I completed a B.S. in Computer Science, alongside AWS certifications in machine learning and AI and a certificate in product innovation entrepreneurship."},{year:"2026 →",title:"Production software",text:"At OptimalHub, I work on asynchronous document processing and parking operations — places where retries, identity, state, and failure handling matter every day."}];
+export const chapters=[
+  {id:"origin",label:"LEVEL 01 · ORIGIN"},
+  {id:"penn-state",label:"LEVEL 02 · PENN STATE"},
+  {id:"builds",label:"LEVEL 03 · BUILDS"},
+  {id:"production",label:"LEVEL 04 · PRODUCTION"},
+  {id:"life",label:"LEVEL 05 · LIFE"},
+  {id:"long-game",label:"LEVEL 06 · LONG GAME"},
+];
+export const ventures=[
+  {name:"Ramaniyam",text:"A creator-led venture developed through LaunchBox. Seven creator partnerships produced more than 25 promotional posts, alongside reported gains in engagement and weekly sales."},
+  {name:"MentorYou.ai",text:"A three-person founding team explored student needs through Idea TestLab and translated feedback into product strategy and pitches."},
+  {name:"Wardrobewise",text:"An entrepreneurial experiment from my Penn State learning journey. I am keeping the public description intentionally modest while the idea evolves."},
+];
 export const fieldNotes=[{title:"Reliability is a product feature.",text:"At OptimalHub, reliability meant designing for the second attempt, not just the happy path.",evidence:["Decoupled PDF extraction from API requests with Lambda, S3, and Kafka.","Used idempotent TypeScript processing, time-window deduplication, and Firestore transaction locks to prevent duplicate parking violations.","Validated PDFextract changes against 123 passing backend tests."]},{title:"AI needs boundaries and evidence.",text:"At PlantVillage, the useful work happened around the model: persistence, evaluation, observability, and regression coverage.",evidence:["Built eight versioned FastAPI endpoints with PostgreSQL and S3-backed workflows.","Investigated retrieval and latency across 24 prompts and 179 LangSmith-traced executions.","Expanded coverage to more than 150 Python and TypeScript tests."]}];
-export const skills=[{name:"Languages",items:["Python","TypeScript","JavaScript","Java"]},{name:"Systems",items:["FastAPI","Flask","Node.js","React","Next.js","PostgreSQL","Kafka"]},{name:"Cloud + AI",items:["AWS","Google Cloud","Docker","Bedrock","Gemini","LangChain","LangGraph"]},{name:"Credentials",items:["AWS Certified Machine Learning Engineer","AWS Certified AI Practitioner","Penn State B.S. Computer Science"]}];
+export const skills=[{name:"Languages",items:["Python","TypeScript","JavaScript","Java"]},{name:"Systems",items:["React","Next.js","Flask","FastAPI","Node.js","PostgreSQL","Kafka"]},{name:"Cloud + AI",items:["AWS","Google Cloud","Docker","Bedrock","Gemini","LangChain","LangGraph"]},{name:"Credentials",items:["AWS Certified Machine Learning Engineer","AWS Certified AI Practitioner","Penn State B.S. Computer Science"]}];
