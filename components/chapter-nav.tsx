@@ -19,8 +19,9 @@ export function ChapterNav({ items }: { items: { id: string; label: string }[] }
   return <header className="book-nav">
     <div className="progress" style={{ transform: `scaleX(${progress})` }} />
     <div className="nav-inner"><a className="mark" href="#top">RU · BOOK II</a>
-      <nav className="desktop-nav" aria-label="Table of contents">{items.map(item => <a className={active === item.id ? "active" : ""} aria-current={active === item.id ? "location" : undefined} key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav>
-      <details className="mobile-nav"><summary>{items.find(item => item.id === active)?.label ?? "Contents"}</summary><div>{items.map(item => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</div></details>
+      <span className="current-level" aria-live="polite">{items.find(item => item.id === active)?.label}</span>
+      <nav className="desktop-nav" aria-label="Primary navigation"><a href="#builds">Work</a><a href="#production">Experience</a><a href="#origin">My story</a><a href="/resume.pdf">Résumé</a><a href="#contact">Contact</a></nav>
+      <details className="mobile-nav"><summary>Menu</summary><div><a href="#builds">Work</a><a href="#production">Experience</a><a href="#origin">My story</a><a href="/resume.pdf">Résumé</a><a href="#contact">Contact</a></div></details>
     </div>
   </header>;
 }
