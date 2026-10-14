@@ -14,7 +14,7 @@ export function ArcadeIntro() {
     }, 180);
   };
   return <aside className={`arcade-cover ${starting ? "is-starting" : ""}`} aria-label="Story shortcuts">
-    <p>PLAYER 01</p>
+    <p>MY STORY</p>
     <strong>RUTHVIK UTTARALA</strong>
     <div><a href="#origin" onClick={startReading}>Start reading</a><a href="#builds">Skip to projects</a></div>
   </aside>;
