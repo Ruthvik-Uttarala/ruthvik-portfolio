@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Newsreader, Silkscreen } from "next/font/google";
 import "./globals.css";
+import "./portfolio.css";
 
 const serif = Newsreader({ variable: "--font-serif", subsets: ["latin"], display: "swap" });
 const pixel = Silkscreen({ variable: "--font-pixel", subsets: ["latin"], weight: ["400", "700"], display: "swap" });
